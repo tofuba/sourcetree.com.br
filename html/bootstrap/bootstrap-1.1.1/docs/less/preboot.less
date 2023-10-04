@@ -1,0 +1,121 @@
+/**
+ * Preboot.less.
+ * Variáveis e mixins para pré-iniciar qualquer novo
+ * projeto de desenvolvimento web.
+ */
+.clearfix
+{
+    -webkit-transform-origin: 0 0;
+       -moz-transform-origin: 0 0;
+            transform-origin: 0 0;
+
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+            transform: scale(1);
+}
+
+.clearfix:before,
+.clearfix:after
+{
+    display: table;
+    content: "";
+}
+
+.clearfix:after
+{
+    clear: both;
+}
+
+.center-block
+{
+    margin: 0 auto;
+    display: block;
+}
+
+.container
+{
+    margin-bottom: 18px;
+    margin: 0 auto;
+    width: 940px;
+
+    -webkit-transform-origin: 0 0;
+       -moz-transform-origin: 0 0;
+            transform-origin: 0 0;
+
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+            transform: scale(1);
+}
+
+.container:before,
+.container:after
+{
+    display: table;
+    content: "";
+}
+
+.container:after
+{
+    clear: both;
+}
+
+.btn.danger,
+.alert-message.danger,
+.btn.danger:hover,
+.alert-message.danger:hover,
+.btn.error,
+.alert-message.error,
+.btn.error:hover,
+.alert-message.error:hover,
+.btn.success,
+.alert-message.success,
+.btn.success:hover,
+.alert-message.success:hover,
+.btn.info,
+.alert-message.info,
+.btn.info:hover,
+.alert-message.info:hover
+{
+    color: #ffffff;
+}
+
+.btn.danger,
+.alert-message.danger,
+.btn.error,
+.alert-message.error
+{
+    background-color: #c43c35;
+    background-repeat: repeat-x;
+    background-image: -webkit-linear-gradient(rgb(238, 95, 91), rgb(196, 60, 53));
+    background-image:    -moz-linear-gradient(rgb(238, 95, 91), rgb(196, 60, 53));
+    background-image:         linear-gradient(rgb(238, 95, 91), rgb(196, 60, 53));
+    border-color: #c43c35 #c43c35 #882a25;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn.success,
+.alert-message.success
+{
+    background-color: #57a957;
+    background-repeat: repeat-x;
+    background-image: -webkit-linear-gradient(rgb(98, 196, 98), rgb(87, 169, 87));
+    background-image:    -moz-linear-gradient(rgb(98, 196, 98), rgb(87, 169, 87));
+    background-image:         linear-gradient(rgb(98, 196, 98), rgb(87, 169, 87));
+    border-color: #57a957 #57a957 #3d773d;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn.info,
+.alert-message.info
+{
+    background-color: #339bb9;
+    background-repeat: repeat-x;
+    background-image: -webkit-linear-gradient(rgb(91, 192, 222), rgb(51, 155, 185));
+    background-image:    -moz-linear-gradient(rgb(91, 192, 222), rgb(51, 155, 185));
+    background-image:         linear-gradient(rgb(91, 192, 222), rgb(51, 155, 185));
+    border-color: #339bb9 #339bb9 #22697d;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}

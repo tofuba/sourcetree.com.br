@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+#
+#
+#
+cd repo
+tar -czvf lmon.tar.gz lmon
+cd ..
+mv repo/lmon.tar.gz .
+

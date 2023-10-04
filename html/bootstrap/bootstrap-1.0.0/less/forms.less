@@ -1,0 +1,497 @@
+/**
+ * Forms.less.
+ *
+ * Estilos básicos para vários tipos de entrada,
+ * layouts de formulário e estados.
+ */
+
+form
+{
+    margin-bottom: 18px;
+}
+
+form fieldset
+{
+    margin-bottom: 18px;
+    padding-top: 18px;
+}
+
+form fieldset legend
+{
+    margin-left: 150px;
+    font-size: 20px;
+    line-height: 1;
+    color: #404040;
+    display: block;
+}
+
+form div.clearfix
+{
+    margin-bottom: 18px;
+}
+
+form label,
+form input,
+form select,
+form textarea
+{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: normal;
+    line-height: normal;
+    font-size: 13px;
+}
+
+form label
+{
+    line-height: 18px;
+    text-align: right;
+    padding-top: 6px;
+    font-size: 13px;
+    color: #404040;
+    width: 130px;
+    float: left;
+}
+
+form div.input
+{
+    margin-left: 150px;
+}
+
+form input[type=checkbox],
+form input[type=radio]
+{
+    cursor: pointer;
+}
+
+form input[type=text],
+form input[type=password],
+form textarea,
+form select,
+form .uneditable-input
+{
+    border: 1px solid #ccc;
+    display: inline-block;
+    line-height: 18px;
+    font-size: 13px;
+    color: #808080;
+    width: 210px;
+    padding: 4px;
+    height: 18px;
+    margin: 0;
+
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+}
+
+form select,
+form input[type=file]
+{
+    line-height: 27px;
+    height: 27px;
+}
+
+form textarea
+{
+    height: auto;
+}
+
+form .uneditable-input
+{
+    background-color: #eee;
+    border-color: #ccc;
+    display: block;
+
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+       -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+
+form :-moz-placeholder
+{
+    color: #bfbfbf;
+}
+
+form ::-webkit-input-placeholder
+{
+    color: #bfbfbf;
+}
+
+form input[type=text],
+form input[type=password],
+form select,
+form textarea
+{
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+       -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+            transition: border linear 0.2s, box-shadow linear 0.2s;
+
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+form input[type=text]:focus,
+form input[type=password]:focus,
+form textarea:focus
+{
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: none;
+
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+       -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+form div.error
+{
+    margin: -10px 0 10px;
+    background: #fae5e3;
+    padding: 10px 0;
+
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+
+form div.error > label,
+form div.error span.help-inline,
+form div.error span.help-block
+{
+    color: #9d261d;
+}
+
+form div.error input[type=text],
+form div.error input[type=password],
+form div.error textarea
+{
+    border-color: #c87872;
+
+    -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
+       -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
+            box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
+}
+
+form div.error input[type=text]:focus,
+form div.error input[type=password]:focus,
+form div.error textarea:focus
+{
+    border-color: #b9554d;
+
+    -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
+       -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
+            box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
+}
+
+form div.error div.input-prepend span.add-on,
+form div.error div.input-append span.add-on
+{
+    border-color: #c87872;
+    background: #f4c8c5;
+    color: #b9554d;
+}
+
+form .input-mini,
+form input.mini,
+form textarea.mini,
+form select.mini
+{
+    width: 60px;
+}
+
+form .input-small,
+form input.small,
+form textarea.small,
+form select.small
+{
+    width: 90px;
+}
+
+form .input-medium,
+form input.medium,
+form textarea.medium,
+form select.medium
+{
+    width: 150px;
+}
+
+form .input-large,
+form input.large,
+form textarea.large,
+form select.large
+{
+    width: 210px;
+}
+
+form .input-xlarge,
+form input.xlarge,
+form textarea.xlarge,
+form select.xlarge
+{
+    width: 270px;
+}
+
+form .input-xxlarge,
+form input.xxlarge,
+form textarea.xxlarge,
+form select.xxlarge
+{
+    width: 530px;
+}
+
+form textarea.xxlarge
+{
+    overflow-y: scroll;
+}
+
+form input[readonly]:focus,
+form textarea[readonly]:focus,
+form input.disabled
+{
+    background: #f5f5f5;
+    border-color: #ddd;
+
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+
+div.actions
+{
+    padding: 17px 20px 18px 150px;
+    border-top: 1px solid #ddd;
+    background: #f5f5f5;
+    margin-bottom: 18px;
+    margin-top: 18px;
+
+    -webkit-border-radius: 0 0 3px 3px;
+       -moz-border-radius: 0 0 3px 3px;
+            border-radius: 0 0 3px 3px;
+}
+
+div.actions div.secondary-action
+{
+    float: right;
+}
+
+div.actions div.secondary-action a
+{
+    line-height: 30px;
+}
+
+div.actions div.secondary-action a:hover
+{
+    text-decoration: underline;
+}
+
+.help-inline, .help-block
+{
+    line-height: 18px;
+    font-size: 12px;
+    color: #bfbfbf;
+}
+
+.help-inline
+{
+    padding-left: 5px;
+}
+
+.help-block
+{
+    max-width: 600px;
+    display: block;
+}
+
+div.inline-inputs
+{
+    color: #808080;
+}
+
+div.inline-inputs span,
+div.inline-inputs input[type=text]
+{
+    display: inline-block;
+}
+
+div.inline-inputs input.mini
+{
+    width: 60px;
+}
+
+div.inline-inputs input.small
+{
+    width: 90px;
+}
+
+div.inline-inputs span
+{
+    padding: 0 2px 0 1px;
+}
+
+div.input-prepend input[type=text],
+div.input-append input[type=text]
+{
+    -webkit-border-radius: 0 3px 3px 0;
+       -moz-border-radius: 0 3px 3px 0;
+            border-radius: 0 3px 3px 0;
+}
+
+div.input-prepend .add-on,
+div.input-append .add-on
+{
+    text-shadow: 0 1px 0 #fff;
+    padding: 4px 4px 4px 5px;
+    border: 1px solid #ccc;
+    border-right-width: 0;
+    background: #f5f5f5;
+    font-weight: normal;
+    text-align: center;
+    line-height: 18px;
+    min-width: 16px;
+    display: block;
+    color: #bfbfbf;
+    height: 18px;
+    float: left;
+    width: auto;
+
+    -webkit-border-radius: 3px 0 0 3px;
+       -moz-border-radius: 3px 0 0 3px;
+            border-radius: 3px 0 0 3px;
+}
+
+div.input-prepend .active,
+div.input-append .active
+{
+    border-color: #46a546;
+    background: #a9dba9;
+}
+
+div.input-append input[type=text]
+{
+    float: left;
+
+    -webkit-border-radius: 3px 0 0 3px;
+       -moz-border-radius: 3px 0 0 3px;
+            border-radius: 3px 0 0 3px;
+}
+
+div.input-append .add-on
+{
+    border-right-width: 1px;
+    border-left-width: 0;
+
+    -webkit-border-radius: 0 3px 3px 0;
+       -moz-border-radius: 0 3px 3px 0;
+            border-radius: 0 3px 3px 0;
+}
+
+ul.inputs-list
+{
+    margin: 0 0 5px;
+    width: 100%;
+}
+
+ul.inputs-list li
+{
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+ul.inputs-list li label
+{
+    white-space: normal;
+    line-height: 18px;
+    text-align: left;
+    display: block;
+    float: none;
+    width: auto;
+    padding: 0;
+}
+
+ul.inputs-list li label strong
+{
+    color: #808080;
+}
+
+ul.inputs-list li label small
+{
+    font-weight: normal;
+    font-size: 12px;
+}
+
+ul.inputs-list li ul.inputs-list
+{
+    margin-bottom: 10px;
+    margin-left: 25px;
+    padding-top: 0;
+}
+
+ul.inputs-list li:first-child
+{
+    padding-top: 5px;
+}
+
+ul.inputs-list input[type=radio],
+ul.inputs-list input[type=checkbox]
+{
+    margin-bottom: 0;
+}
+
+form.form-stacked
+{
+    padding-left: 20px;
+}
+
+form.form-stacked fieldset
+{
+    padding-top: 9px;
+}
+
+form.form-stacked legend
+{
+    margin-left: 0;
+}
+
+form.form-stacked label
+{
+    line-height: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 0;
+    display: block;
+    float: none;
+    width: auto;
+}
+
+form.form-stacked div.clearfix
+{
+    margin-bottom: 9px;
+}
+
+form.form-stacked div.clearfix div.input
+{
+    margin-left: 0;
+}
+
+form.form-stacked ul.inputs-list
+{
+    margin-bottom: 0;
+}
+
+form.form-stacked ul.inputs-list li
+{
+    padding-top: 0;
+}
+
+form.form-stacked ul.inputs-list li label
+{
+    font-weight: normal;
+    padding-top: 0;
+}
+
+form.form-stacked div.actions
+{
+    margin-left: -20px;
+    padding-left: 20px;
+}

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+
+#
+#
+#
+cd repo
+tar -czvf nmon.tar.gz nmon
+cd ..
+mv repo/nmon.tar.gz .

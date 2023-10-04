@@ -1,0 +1,26 @@
+#
+# Contribuidor: Chifrudo <chifrudo@localhost.com.br>
+#
+
+pkgname=python-satisfaction
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="O real funcionamento de um 'python-satisfaction'."
+arch=('any')
+url="http://python-satisfaction.com.br"
+license=('GPL')
+depends=('bash' 'python' 'python-dateutil')
+makedepends=('git')
+optdepends=('python-dateutil: para fazer calculos de mêses.')
+source=("python-satisfaction.tar.gz")
+md5sums=('SKIP')
+
+#
+# Empacotar
+#
+package()
+{
+    cd python-satisfaction
+
+    install -Dm755 "python-satisfaction.py" "$pkgdir/usr/bin/python-satisfaction.py"
+}

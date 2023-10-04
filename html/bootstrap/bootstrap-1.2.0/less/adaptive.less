@@ -1,0 +1,82 @@
+/**
+ * Responsive.less.
+ * Estilos de grade ajustados para lidar com alguns
+ * tamanhos de tela comuns.
+ */
+
+//
+// MOBILE PORTRAIT & LANDSCAPE.
+//
+// Para dispositivos mais estreitos que 480px.
+//
+@media only screen and (max-width: 480px)
+{
+    /**
+     * Remova a largura fixa dos contêineres.
+     */
+    .container
+    {
+        padding: 0 10px;
+        width: auto;
+    }
+
+    /**
+     * Desfaça a flutuação das colunas.
+     */
+    .row
+    {
+        margin-left: 0;
+    }
+
+    .row [class^="span"]
+    {
+        margin-left: 0;
+        display: block;
+        width: 100%;
+        float: none;
+    }
+
+    /**
+     * Empilhar elementos do formulário em vez de flutuá-los.
+     */
+    fieldset legend
+    {
+        margin-left: 0;
+    }
+
+    label
+    {
+        text-align: left;
+        width: auto;
+        float: none;
+    }
+
+    div.input
+    {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .input-xxlarge,
+    input.xxlarge,
+    textarea.xxlarge,
+    select.xxlarge
+    {
+        width: 80%;
+    }
+
+    /**
+     * Ajuste modal.
+     */
+    .modal-backdrop
+    {
+        padding: 10px;
+    }
+
+    .modal
+    {
+        width: 100%;
+        left: auto;
+        margin: 0;
+    }
+}

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+#
+#
+#
+cd repo
+tar -czvf pes.tar.gz pes
+cd ..
+mv repo/pes.tar.gz .
+

@@ -1,0 +1,50 @@
+/**
+ * Copyright (C) <ano>  Chifrudo <chifrudo@localhost.com.br>
+ *
+ * Este programa é um software livre: você pode redistribuí-lo e/ou
+ * modificá-lo sob os termos da GNU General Public License conforme
+ * publicada por a Free Software Foundation, seja a versão 3 da
+ * Licença, ou (a seu critério) qualquer versão posterior.
+ *
+ * Este programa é distribuído na esperança de que seja útil,
+ * mas SEM QUALQUER GARANTIA; mesmo sem a garantia implícita de
+ * COMERCIABILIDADE ou ADEQUAÇÃO PARA UM FIM ESPECÍFICO. Veja a
+ * Licença Pública Geral GNU para mais detalhes.
+ *
+ * Você deve ter recebido uma cópia da GNU General Public License
+ * juntamente com este programa. Caso contrário, consulte
+ * <https://www.gnu.org/licenses/>.
+ */
+
+
+/**
+ * Gerado por Font Squirrel.
+ */
+
+@font-face
+{
+    font-family: 'Press Start';
+
+    src: url('pressstart2p-webfont.eot');
+    src: url('pressstart2p-webfont.eot?#iefix') format('embedded-opentype'),
+        url('pressstart2p-webfont.woff') format('woff'),
+        url('pressstart2p-webfont.ttf') format('truetype'),
+        url('pressstart2p-webfont.svg#press_start_2pregular') format('svg');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Super Plumber Bros';
+
+    src: url('super_plumber_brothers-webfont.eot');
+    src: url('super_plumber_brothers-webfont.eot?#iefix') format('embedded-opentype'),
+        url('super_plumber_brothers-webfont.woff') format('woff'),
+        url('super_plumber_brothers-webfont.ttf') format('truetype'),
+        url('super_plumber_brothers-webfont.svg#super_plumber_brothersregular') format('svg');
+
+    font-weight: normal;
+    font-style: normal;
+}

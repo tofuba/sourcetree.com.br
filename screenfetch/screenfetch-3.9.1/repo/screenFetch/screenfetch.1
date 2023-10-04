@@ -1,0 +1,143 @@
+.TH SCREENFETCH "10" "Maio 2023" "3.9.1" "Plug's da Pessoa"
+.\" Não remova as linhas que começam com ».\" @supported_« !
+.\" Eles são importantes para update-manpage.sh.
+
+.SH NAME
+screenFetch \- A ferramenta de informações de captura de tela do Bash
+
+.SH SYNOPSIS
+.B screenfetch \fR[OPTIONAL FLAGS]
+
+.SH DESCRIPTION
+Este prático script Bash pode ser usado para gerar uma daquelas
+informações bacanas de tema de console + logotipos de distribuição
+ASCII que você vê nas capturas de tela de todos hoje em dia. Ele
+detectará automaticamente sua distribuição e exibirá uma versão
+ASCII do logotipo dessa distribuição e algumas informações
+valiosas à direita. Existem opções para especificar nenhuma arte
+ASCII, cores, tirar uma captura de tela ao exibir informações e
+até mesmo personalizar o plug de captura de tela! Este script é
+muito fácil de adicionar e pode ser facilmente estendido.
+.PP
+Distribuições GNU/Linux suportadas:
+.IP
+.\" @supported_distros_start@
+ALDOS, Alpine Linux, Amazon Linux, Antergos, Arch Linux (Old and Current Logos), Artix Linux, blackPanther OS, BLAG, BunsenLabs, CentOS, Chakra, Chapeau, Chrome OS, Chromium OS, CrunchBang, CRUX, Debian, Deepin, DesaOS, Devuan, Dragora, elementary OS, Evolve OS, Exherbo, Fedora, Frugalware, Fuduntu, Funtoo, Fux, Gentoo, gNewSense, Guix System, Hyperbola GNU/Linux-libre, Jiyuu Linux, Kali Linux, KaOS, KDE neon, Kogaion, Korora, LinuxDeepin, Linux Mint, LMDE, Logos, Mageia, Mandriva/Mandrake, Manjaro, Mer, Netrunner, NixOS, OBRevenge, openSUSE, OS Elbrus, Oracle Linux, Parabola GNU/Linux-libre, Pardus, Parrot Security, PCLinuxOS, PeppermintOS, Proxmox VE, PureOS, Qubes OS, Raspbian, Red Hat Enterprise Linux, ROSA, Sabayon, SailfishOS, Scientific Linux, Siduction, Slackware, Solus, Source Mage GNU/Linux, SparkyLinux, SteamOS, SUSE Linux Enterprise, SwagArch, TinyCore, Trisquel, Ubuntu, Viperr, Void and Zorin OS.
+.\" @supported_distros_end@
+.PP
+Outros sistemas suportados:
+.IP
+.\" @supported_other_start@
+Dragonfly/Free/Open/Net BSD, Haiku, Mac OS X, Windows+Cygwin and Windows+MSYS2.
+.\" @supported_other_end@
+.PP
+Gerenciadores de área de trabalho compatíveis:
+.IP
+.\" @supported_dms_start@
+KDE, GNOME, Unity, Xfce, LXDE, Cinnamon, MATE, Deepin, CDE, RazorQt and Trinity.
+.\" @supported_dms_end@
+.PP
+Gerenciadores de Janelas Suportados:
+.IP
+.\" @supported_wms_start@
+2bwm, 9wm, Awesome, Beryl, Blackbox, Cinnamon, chromeos-wm, Compiz, deepin-wm, dminiwm, dwm, dtwm, E16, E17, echinus, Emerald, FluxBox, FLWM, FVWM, herbstluftwm, howm, IceWM, KWin, Metacity, monsterwm, Musca, Gala, Mutter, Muffin, Notion, OpenBox, PekWM, Ratpoison, Sawfish, ScrotWM, SpectrWM, StumpWM, subtle, sway, TWin, WindowMaker, WMFS, wmii, Xfwm4, XMonad and i3.
+.\" @supported_wms_end@
+
+.SH OPTIONS
+.TP
+.B \-v
+Saída detalhada.
+.TP
+.B \-o 'OPTIONS'
+Permite definir variáveis de script na linha de console.
+Deve estar no seguinte formato:
+\&'OPTION1="OPTIONARG1";OPTION2="OPTIONARG2"'
+.TP
+.B -d '+var;-var;var'
+Permite definir quais informações são exibidas na linha de
+console. Você pode adicionar exibições com +var,var. Você
+pode excluir exibições com -var,var. Definir sem + ou -
+definirá a exibição para essa combinação explícita. As
+instruções add e delete podem ser usadas em conjunto
+colocando um ; entre eles assim:
++var,var,var;-var,var.
+.TP
+.B \-n
+Não exiba o logotipo de distribuição ASCII.
+.TP
+.B \-L
+Exibir apenas o logotipo de distribuição ASCII.
+.TP
+.B \-N
+Tira todas as cores da saída.
+.TP
+.B \-w
+Enrole linhas longas.
+.TP
+.B \-t
+Saída truncada com base na largura do console.
+.TP
+.B \-p
+Saída no modo retrato, com o logotipo acima das informações.
+.TP
+.B \-s [-u IMGHOST]
+O uso desse sinalizador informa ao script que você deseja
+fazer uma captura de tela. Use o sinalizador \fB\-u\fR
+se quiser enviar as capturas de tela para um dos locais
+pré-configurados. Estes incluem: teknik, imgur,
+mediacrush e hmp.
+.TP
+.B \-c string
+Você pode alterar as cores de saída com \fB\-c\fR.
+O formato é o seguinte: [0\-9][0\-9],[0\-9][0\-9]. O primeiro
+argumento controla as cores do logotipo ASCII e as cores do
+rótulo. O segundo argumento controla as cores das informações
+encontradas. Um argumento pode ser usado sem o outro.
+.TP
+.B \-a 'PATH'
+Você pode especificar uma arte ASCII personalizada passando
+o caminho para um script Bash, definindo as variáveis
+\fBstartline\fR e \fBfulloutput\fR e, opcionalmente,
+\fBlabelcolor\fR e \fBtextcolor\fR. Consulte a função
+\fBasciiText\fR no código-fonte para obter mais informações
+sobre o formato das variáveis.
+.TP
+.B \-S 'COMMAND'
+Aqui você pode especificar um plug de captura de tela
+personalizado para o script de procedimento. As aspas
+circundantes são necessárias.
+.TP
+.B \-D 'DISTRO'
+Aqui você pode especificar sua distribuição para o
+script usar. As aspas circundantes são necessárias.
+.TP
+.B \-A 'DISTRO'
+Aqui você pode especificar a arte de distribuição que
+deseja exibir. Isso é para quando você deseja que sua
+distro seja detectada, mas deseja exibir um logotipo
+diferente.
+.TP
+.B \-E
+Suprimir a saída de falhas.
+.TP
+.B \-V, \-\-version
+Exibe a versão atual do script.
+.TP
+.B \-h, \-\-help
+Exibir esta ajuda.
+
+.SH "SEE ALSO"
+http://localhost/screenFetch
+
+.SH AUTHOR
+Criado por {{ nome_do_autor(); }}.
+Portabilidade da maça feita quase exclusivamente por {{ nome_do_autor(); }}.
+.PP
+Esta página de manual foi escrita por {{ nome_do_autor(); }}.
+
+.SH REPORTING BUGS
+Relatar falhas para {{ nome_do_autor(); }}.
+
+.SH COPYRIGHT
+Este é um software livre; veja a fonte para condições de cópia.
+NÃO há garantia; nem mesmo COMERCIABILIDADE ou ADEQUAÇÃO PARA UM FIM ESPECÍFICO.

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <!--
+      - Copyright (C) <ano>  Chifrudo <chifrudo@localhost.com.br>
+      -
+      - Este programa é um software livre: você pode redistribuí-lo e/ou
+      - modificá-lo sob os termos da GNU General Public License conforme
+      - publicada por a Free Software Foundation, seja a versão 3 da
+      - Licença, ou (a seu critério) qualquer versão posterior.
+      -
+      - Este programa é distribuído na esperança de que seja útil,
+      - mas SEM QUALQUER GARANTIA; mesmo sem a garantia implícita de
+      - COMERCIABILIDADE ou ADEQUAÇÃO PARA UM FIM ESPECÍFICO. Veja a
+      - Licença Pública Geral GNU para mais detalhes.
+      -
+      - Você deve ter recebido uma cópia da GNU General Public License
+      - juntamente com este programa. Caso contrário, consulte
+      - <https://www.gnu.org/licenses/>.
+     -->
+
+    <!--
+      - Charset.
+     -->
+    <meta charset="utf-8">
+
+    <!--
+      - Título.
+     -->
+    <title>Analisador de imagens</title>
+
+    <!--
+      - Estilos.
+     -->
+    <link rel="stylesheet" href="parser.css">
+
+    <!--
+      - Scripts.
+     -->
+    <script src="parser.js"></script>
+
+</head>
+<body onload="load()">
+
+    <h1>
+        Conversor de Imagem Sprite
+    </h1>
+
+    <div id="sources" style="float:left" >
+        <div id="left" class="column">
+            <h2>
+                Fazer upload de arquivos
+            </h2>
+
+            <!--
+              - <input type="file" multiple id="dropzone">
+             -->
+
+            <div id="dropzone">
+                Drag & drop aqui
+            </div>
+
+            <!--
+              - <div id="scaler">
+              -     <h3>
+              -         Tamanhos de escala
+              -     </h3>
+              -
+              -     <div>
+              -         x: <input id="scalex" value="1">
+              -     </div>
+              -
+              -     <div>
+              -         y: <input id="scaley" value="1">
+              -     </div>
+              - </div>
+             -->
+
+            <ol id="curlist"></ol>
+        </div>
+
+        <div id="middle" class="column" style="max-width:420px">
+            <h2>
+                Selecione sua paleta de cores
+            </h2>
+
+            <div id="palettes"></div>
+        </div>
+    </div>
+
+    <div id="right" class="column">
+        <h2>
+            Obtenha sua saída
+        </h2>
+
+        <!--
+          - <div id="num_files">
+          -     Nenhum arquivo convertido até agora !
+          - </div>
+         -->
+
+        <ol id="outlist"></ol>
+    </div>
+
+</body>
+</html>

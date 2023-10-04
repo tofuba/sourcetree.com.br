@@ -1,0 +1,10 @@
+#!/bin/sh
+
+
+#
+#
+#
+cd repo
+tar -czvf screenFetch.tar.gz screenFetch
+cd ..
+mv repo/screenFetch.tar.gz .

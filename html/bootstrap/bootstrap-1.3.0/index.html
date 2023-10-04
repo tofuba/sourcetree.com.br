@@ -1,0 +1,4236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <!--
+      - Copyright (C) <ano>  Chifrudo <chifrudo@localhost.com.br>
+      -
+      - Este programa é um software livre: você pode redistribuí-lo e/ou
+      - modificá-lo sob os termos da GNU General Public License conforme
+      - publicada por a Free Software Foundation, seja a versão 3 da
+      - Licença, ou (a seu critério) qualquer versão posterior.
+      -
+      - Este programa é distribuído na esperança de que seja útil,
+      - mas SEM QUALQUER GARANTIA; mesmo sem a garantia implícita de
+      - COMERCIABILIDADE ou ADEQUAÇÃO PARA UM FIM ESPECÍFICO. Veja a
+      - Licença Pública Geral GNU para mais detalhes.
+      -
+      - Você deve ter recebido uma cópia da GNU General Public License
+      - juntamente com este programa. Caso contrário, consulte
+      - <https://www.gnu.org/licenses/>.
+     -->
+
+    <!--
+      - Charset.
+     -->
+    <meta charset="utf-8">
+
+    <!--
+      - Viewport.
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+      - Favicon.
+     -->
+    <link rel="icon" href="assets/ico/favicon.ico" type="image/x-icon">
+
+    <!--
+      - Título.
+     -->
+    <title>Bootstrap</title>
+
+    <!--
+      - HTML5 shim, para suporte IE6-8 de elementos HTML.
+     -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv-3.7.3.js"></script>
+    <![endif]-->
+
+    <!--
+      - Styles.
+     -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/docs.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/google-code-prettify/prettify.css">
+
+    <!--
+      - Javascript.
+     -->
+    <script src="assets/js/jquery/jquery-1.5.2.js"></script>
+    <script src="assets/js/jquery/jquery.tablesorter.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <!--
+      - Javascript.
+     -->
+    <script>
+        $(function ()
+        {
+            prettyPrint();
+        });
+    </script>
+
+    <!--
+      - Javascript.
+     -->
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-twipsy.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/application.js"></script>
+
+</head>
+<body>
+
+    <!--
+      - Topbar.
+     -->
+    <div class="topbar" data-scrollspy="scrollspy" >
+        <div class="topbar-inner">
+            <div class="container">
+                <a href="#" class="brand" style="font-size: 18px; padding-left: 10px; padding-right: 10px;">
+                    Bootstrap
+                </a>
+
+                <ul class="nav" style="margin-right: 0;">
+                    <li class="active">
+                        <a href="#overview">
+                            Visão geral
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            Sobre
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#grid-system">
+                            Grid
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#layouts">
+                            Layouts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#typography">
+                            Tipografia
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#media">
+                            Media
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#tables">
+                            Tabelas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#forms">
+                            Formulários
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#navigation">
+                            Navegação
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#alerts">
+                            Alertas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#popovers">
+                            Popovers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#javascript">
+                            Javascript
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--
+      - Masthead (blueprinty thing).
+     -->
+    <header class="jumbotron masthead" id="overview">
+        <div class="inner">
+            <div class="container">
+                <h1>
+                    Bootstrap
+                </h1>
+
+                <p class="lead">
+                    Bootstrap é um kit de ferramentas projetado para iniciar
+                    o desenvolvimento de aplicativos e sites da web.
+                    <br>
+
+                    Inclui CSS e HTML base para tipografia, formulários,
+                    botões, tabelas, grids, navegação e muito mais.
+                    <br>
+                </p>
+
+                <p>
+                    <strong>Alerta:</strong> Bootstrap é 
+                    <a href="#less" title="Leia sobre como usar o Bootstrap com Less">
+                    construíndo com Less</a> e foi projetado para funcionar
+                    desde o início com os navegadores modernos em mente.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!--
+      - Opções de início rápido.
+     -->
+    <div class="quickstart">
+        <div class="container">
+            <div class="row">
+                <div class="span5">
+                    <h6>
+                        Faça um link direto para o CSS
+                    </h6>
+
+                    <p>
+                        Para um início mais rápido e fácil, basta copiar este
+                        snippet em sua página da web.
+                    </p>
+
+                    <form>
+                        <textarea class="copy-code" rows="1">&lt;link rel="stylesheet" href="http://getbootstrap.com.br/1.3.0/assets/css/bootstrap.css"></textarea>
+                    </form>
+                </div>
+
+                <div class="span5">
+                    <h6>
+                        Use-o com Less
+                    </h6>
+
+                    <p>
+                        Fã de usar Less ? Não tem problema, basta clonar
+                        o repositório e adicionar estas linhas:
+                    </p>
+
+                    <form>
+                        <textarea class="copy-code" rows="2">&lt;link rel="stylesheet/less" href="/path/to/bootstrap.less"&gt;
+&lt;script type="text/javascript" src="/path/to/less.js"&gt;&lt;/script&gt;</textarea>
+                    </form>
+                </div>
+
+                <div class="span5">
+                    <h6>
+                        Fork on Git
+                    </h6>
+
+                    <p>
+                        Problemas de download, bifurcação, pull, arquivo e
+                        muito mais com o repositório oficial do Bootstrap
+                        no Git.
+                    </p>
+
+                    <p>
+                        <a href="" class="btn primary" rel="noopener" target="_blank">
+                            Bootstrap no Git &raquo;
+                        </a>
+                    </p>
+
+                    <p class="current-version">
+                        Atualmente
+
+                        <a href="">
+                            v1.3.0
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!--
+          - Sobre o Bootstrap.
+         -->
+        <section id="about">
+            <div class="page-header">
+                <h1>
+                    Sobre o Bootstrap
+
+                    <small>
+                        Breve histórico, suporte ao navegador e muito mais
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span-one-third">
+                    <h3>
+                        História
+                    </h3>
+
+                    <p>
+                        Historicamente, os engenheiros usaram quase todas as
+                        bibliotecas com as quais estavam familiarizados para
+                        atender aos requisitos de front-end. Bootstrap começou
+                        como uma resposta aos desafios que se apresentavam. Com
+                        a ajuda de muitas pessoas incríveis, o Bootstrap
+                        cresceu significativamente.
+                    </p>
+
+                    <p>
+                        Leia mais em
+
+                        <a href="http://getbootstrap.com.br/1.3.0/index.html">
+                            dev.twitter.com &rsaquo;
+                        </a>
+                    </p>
+                </div>
+
+                <div class="span-one-third">
+                    <h3>
+                        Suporte ao navegador
+                    </h3>
+
+                    <p>
+                        Bootstrap é testado e compatível com os principais
+                        navegadores modernos, como Chrome, Safari, Internet
+                        Explorer e Firefox.
+                    </p>
+
+                    <img src="assets/img/browsers.png" alt="Testado e compatível com Chrome, Safari, Internet Explorer, e Firefox">
+
+                    <ul>
+                        <li>
+                            Latest Safari
+                        </li>
+
+                        <li>
+                            Latest Google Chrome
+                        </li>
+
+                        <li>
+                            Firefox 4+
+                        </li>
+
+                        <li>
+                            Internet Explorer 7+
+                        </li>
+
+                        <li>
+                            Opera 11
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="span-one-third">
+                    <h3>
+                        O que está incluído
+                    </h3>
+
+                    <p>
+                        Bootstrap vem completo com CSS compilado, não compilado
+                        e modelos de exemplo.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <span class="label">Novo em 1.3</span>
+                            <a href="./javascript.html">Plugins Javascript</a>
+                        </li>
+
+                        <li>
+                            Todos os arquivos .less originais
+                        </li>
+
+                        <li>
+                            CSS completamente
+                            <a href="assets/css/bootstrap.css">compilado</a> e
+                            <a href="assets/css/bootstrap.min.css">minificado</a>
+                        </li>
+
+                        <li>
+                            Documentação completa do guia de estilo
+                        </li>
+
+                        <li>
+                            Três páginas de exemplo com layouts diferentes
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span12">
+                    <h3>
+                        Exemplos de início rápido
+                    </h3>
+
+                    <p>
+                        Precisa de alguns modelos rápidos ? Confira estes
+                        exemplos básicos que reunimos:
+                    </p>
+
+                    <ul class="media-grid">
+                        <li>
+                            <a href="examples/hero/index.html">
+                                <img
+                                    src="assets/img/example-diagram-01.png"
+                                    alt="Layout simples de três colunas com unidade hero">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="examples/fluid/index.html">
+                                <img
+                                    src="assets/img/example-diagram-02.png"
+                                    alt="Layout fluido com barra lateral estática">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="examples/container-app/index.html">
+                                <img
+                                    src="assets/img/example-diagram-03.png"
+                                    alt="Recipiente suspenso simples para aplicativos">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Grid system.
+         -->
+        <section id="grid-system">
+            <div class="page-header">
+                <h1>
+                    Grid system
+
+                    <small>
+                        Balance o 940px padrão ou crie o seu próprio
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Grid padrão
+                    </h2>
+
+                    <p>
+                        O sistema de grid padrão fornecido como parte do Bootstrap
+                        é um grid de 16 colunas com 940 pixels de largura. É uma
+                        amostra do popular sistema de grid 960, mas sem
+                        margem/preenchimento adicional nos lados esquerdo e
+                        direito.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <h3>
+                        Exemplo de marcação de grid
+                    </h3>
+
+                    <p>
+                        Conforme mostrado aqui, um layout básico pode ser criado
+                        com duas “colunas”, cada uma abrangendo uma série de 16
+                        colunas fundamentais que definimos como parte do nosso
+                        sistema de grid. Veja os exemplos abaixo para mais
+                        variações.
+                    </p>
+
+                    <pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="span6"&gt;
+        ...
+    &lt;/div&gt;
+
+    &lt;div class="span10"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+            </div>
+
+            <div class="row show-grid" title="16 column layout">
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+
+                <div class="span1">
+                    1
+                </div>
+            </div>
+
+            <div class="row show-grid" title="8 column layout">
+                <div class="span2">
+                    2
+                </div>
+
+                <div class="span2">
+                    2
+                </div>
+
+                <div class="span2">
+                    2
+                </div>
+
+                <div class="span2">
+                    2
+                </div>
+
+                <div class="span2">
+                    2
+                </div>
+
+                <div class="span2">
+                    2
+                </div>
+
+                <div class="span2">
+                    2
+                </div>
+
+                <div class="span2">
+                    2
+                </div>
+            </div>
+
+            <div class="row show-grid" title="Example uncommon layout">
+                <div class="span3">
+                    3
+                </div>
+
+                <div class="span3">
+                    3
+                </div>
+
+                <div class="span3">
+                    3
+                </div>
+
+                <div class="span3">
+                    3
+                </div>
+
+                <div class="span3">
+                    3
+                </div>
+
+                <div class="span1 column">
+                    1
+                </div>
+            </div>
+
+            <div class="row show-grid" title="Four column layout">
+                <div class="span4">
+                    4
+                </div>
+
+                <div class="span4">
+                    4
+                </div>
+
+                <div class="span4">
+                    4
+                </div>
+
+                <div class="span4">
+                    4
+                </div>
+            </div>
+
+            <div class="row show-grid" title="Default three column layout">
+                <div class="span-one-third">
+                    1/3
+                </div>
+
+                <div class="span-one-third">
+                    1/3
+                </div>
+
+                <div class="span-one-third">
+                    1/3
+                </div>
+            </div>
+
+            <div class="row show-grid" title="One-third and two-thirds layout">
+                <div class="span-one-third">
+                    1/3
+                </div>
+
+                <div class="span-two-thirds">
+                    2/3
+                </div>
+            </div>
+
+            <div class="row show-grid" title="Irregular three column layout">
+                <div class="span4">
+                    4
+                </div>
+
+                <div class="span6">
+                    6
+                </div>
+
+                <div class="span6">
+                    6
+                </div>
+            </div>
+
+            <div class="row show-grid" title="Half and half">
+                <div class="span8">
+                    8
+                </div>
+
+                <div class="span8">
+                    8
+                </div>
+            </div>
+
+            <div class="row show-grid" title="Example uncommon two-column layout">
+                <div class="span5">
+                    5
+                </div>
+
+                <div class="span11">
+                    11
+                </div>
+            </div>
+
+            <div class="row show-grid" title="Unnecessary single column layout">
+                <div class="span16">
+                    16
+                </div>
+            </div>
+
+            <br>
+
+            <h2>
+                Colunas de deslocamento
+            </h2>
+
+            <div class="row show-grid">
+                <div class="span4">
+                    4
+                </div>
+
+                <div class="span8 offset4">
+                    8 offset 4
+                </div>
+            </div>
+
+            <div class="row show-grid">
+                <div class="span-one-third offset-two-thirds">
+                    1/3 offset 2/3s
+                </div>
+            </div>
+
+            <div class="row show-grid">
+                <div class="span4 offset4">
+                    4 offset 4
+                </div>
+
+                <div class="span4 offset4">
+                    4 offset 4
+                </div>
+            </div>
+
+            <div class="row show-grid">
+                <div class="span5 offset3">
+                    5 offset 3
+                </div>
+
+                <div class="span5 offset3">
+                    5 offset 3
+                </div>
+            </div>
+
+            <div class="row show-grid">
+                <div class="span10 offset6">
+                    10 offset 6
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Colunas de aninhamento
+                    </h2>
+
+                    <p>
+                        Aninhe seu conteúdo, se necessário, criando um <code>.row</code>
+                        dentro de uma coluna existente.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <h4>
+                        Exemplo de colunas aninhadas
+                    </h4>
+
+                    <div class="row show-grid">
+                        <div class="span12">
+                            Nível 1 da coluna
+
+                            <div class="row show-grid">
+                                <div class="span6">
+                                    Nível 2
+                                </div>
+
+                                <div class="span6">
+                                    Nível 2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="span12"&gt;
+        Nível 1 da coluna
+
+        &lt;div class="row"&gt;
+            &lt;div class="span6"&gt;
+                Nível 2
+            &lt;/div&gt;
+
+            &lt;div class="span6"&gt;
+                Nível 2
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Role seu próprio grid
+                    </h2>
+
+                    <p>
+                        Integradas ao Bootstrap estão algumas variáveis para
+                        personalizar o sistema de grid padrão de 940px. Com um
+                        pouco de personalização, você pode modificar o tamanho
+                        das colunas, suas medianizes e o contêiner em que
+                        residem.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <h3>
+                        Dentro do grid
+                    </h3>
+
+                    <p>
+                        As variáveis necessárias para modificar o sistema de rede
+                        atualmente residem todas em <code>preboot.less</code>.
+                    </p>
+
+                    <table class="zebra-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Variável
+                                </th>
+
+                                <th>
+                                    Valor padrão
+                                </th>
+
+                                <th>
+                                    Descrição
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code>@gridColumns</code>
+                                </td>
+
+                                <td>
+                                    16
+                                </td>
+
+                                <td>
+                                    O número de colunas dentro do grid
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>@gridColumnWidth</code>
+                                </td>
+
+                                <td>
+                                    40px
+                                </td>
+
+                                <td>
+                                    A largura de cada coluna dentro do grid
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>@gridGutterWidth</code>
+                                </td>
+
+                                <td>
+                                    20px
+                                </td>
+
+                                <td>
+                                    O espaço negativo entre cada coluna
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>@siteWidth</code>
+                                </td>
+
+                                <td>
+                                    <em>
+                                        O espaço negativo entre cada coluna
+                                    </em>
+                                </td>
+
+                                <td>
+                                    Usamos algumas correspondências básicas para contar
+                                    o número de colunas e calhas e definir a largura do
+                                    mixin <code>.fixed-container()</code>.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>
+                        Agora para personalizar
+                    </h3>
+
+                    <p>
+                        Modificar o grid significa alterar as três variáveis
+                        <code>@grid-*</code> e recompilar os arquivos Less.
+                    </p>
+
+                    <p>
+                        Bootstrap vem equipado para lidar com um sistema de grid
+                        com até 24 colunas; o padrão é apenas 16. Veja como suas
+                        variáveis de grid ficariam personalizadas para um grid
+                        de 24 colunas.
+                    </p>
+
+                    <pre class="prettyprint linenums">@gridColumns: 24;
+@gridColumnWidth: 20px;
+@gridGutterWidth: 20px;</pre>
+
+                    <p>
+                        Depois de recompilado, você estará pronto !
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Layouts (Padrão e fluido).
+         -->
+        <section id="layouts">
+            <div class="page-header">
+                <h1>
+                    Layouts
+
+                    <small>
+                        Modelos básicos para criar páginas da web
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span8">
+                    <h2>
+                        Layout Fixo
+                    </h2>
+
+                    <p>
+                        O layout centralizado padrão e simples de 940 pixels
+                        de largura para praticamente qualquer site ou página
+                        fornecido por um único <code>&lt;div.container&gt;</code>.
+                    </p>
+
+                    <div class="mini-layout">
+                        <div class="mini-layout-body"></div>
+                    </div>
+
+                    <pre class="prettyprint linenums">
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/body&gt;</pre>
+                </div>
+
+                <div class="span8">
+                    <h2>
+                        Layout Fluido
+                    </h2>
+
+                    <p>
+                        Uma estrutura de página alternativa e flexível, com
+                        larguras mínima e máxima e uma barra lateral esquerda.
+                        Ótimo para aplicativos e documentos.
+                    </p>
+
+                    <div class="mini-layout fluid">
+                        <div class="mini-layout-sidebar"></div>
+                        <div class="mini-layout-body"></div>
+                    </div>
+
+                    <pre class="prettyprint linenums">
+&lt;body&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;div class="sidebar"&gt;
+            ...
+        &lt;/div&gt;
+
+        &lt;div class="content"&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</pre>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Tipografia.
+         -->
+        <section id="typography">
+            <div class="page-header">
+                <h1>
+                    Tipografia
+
+                    <small>
+                        Títulos, parágrafos, listas e outros elementos
+                        de tipo inline
+                    </small>
+                </h1>
+            </div>
+
+            <!--
+              - Cópia de títulos e parágrafos.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Títulos &amp; Cópias
+                    </h2>
+
+                    <p>
+                        Uma hierarquia tipográfica padrão para estruturar
+                        suas páginas da web.
+                    </p>
+
+                    <p>
+                        Todo o grid tipográfico é baseada em duas variáveis
+                        Less em nosso arquivo preboot.less: <code>@basefont</code>
+                        e <code>@baseline</code>. O primeiro é o tamanho da
+                        fonte base usado e o segundo é o line-height base.
+                    </p>
+
+                    <p>
+                        Usamos essas variáveis, e um pouco de matemática, para
+                        criar as margens, preenchimentos e alturas de linha de
+                        todos os nossos tipos e muito mais.
+                    </p>
+                </div>
+
+                <div class="span4">
+                    <h1>h1. Título 1</h1>
+                    <h2>h2. Título 2</h2>
+                    <h3>h3. Título 3</h3>
+                    <h4>h4. Título 4</h4>
+                    <h5>h5. Título 5</h5>
+                    <h6>h6. Título 6</h6>
+                </div>
+
+                <div class="span8">
+                    <h3>
+                        Parágrafo de exemplo
+                    </h3>
+
+                    <p>
+                        Esta noite te amo em uma tarde de primavera. Te amo
+                        com a janela aberta. És minha, e as coisas são minhas,
+                        e meu amor altera as coisas ao meu redor e as coisas
+                        a meu redor alteram meu amor.
+                    </p>
+
+                    <h1>
+                        Exemplo de título
+
+                        <small>
+                            Tem subtítulo&hellip;
+                        </small>
+                    </h1>
+                </div>
+            </div>
+
+            <!--
+              - Misc. elementos.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Misc. elementos
+                    </h2>
+
+                    <p>
+                        Usando ênfase, endereços e &amp; abreviaturas
+                    </p>
+
+                    <p>
+                        <code>&lt;strong&gt;</code>
+                        <code>&lt;em&gt;</code>
+                        <code>&lt;address&gt;</code>
+                        <code>&lt;abbr&gt;</code>
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <h3>
+                        Quando usar
+                    </h3>
+
+                    <p>
+                        Tags de ênfase (<code>&lt;strong&gt;</code> e <code>&lt;em&gt;</code>)
+                        deve ser usado para indicar importância ou ênfase
+                        adicional de uma palavra ou frase em relação ao
+                        texto ao seu redor. Use <code>&lt;strong&gt;</code>
+                        por importância e <code>&lt;em&gt;</code> para ênfase
+                        de <em>stress</em>.
+                    </p>
+
+                    <h3>
+                        Ênfase em um parágrafo
+                    </h3>
+
+                    <p>
+                        <a href="#">Fique tranquila</a>,
+                        <strong>me ame, hoje, ontem, desejos</strong>,
+                        <em>sofridos por você, você, minha</em>,
+                        vida, meu tudo, adeus. Oh, continue a me amar,
+                        jamais duvide do coração fiel de seu amado.
+                        Fique tranquila, me ame, hoje.
+                    </p>
+
+                    <p>
+                        <strong>Observação:</strong> Ainda não há problema em
+                        usar <code>&lt;b&gt;</code> e tags <code>&lt;i&gt;</code>
+                        em HTML5 e não precisam ser estilizados em negrito e
+                        itálico, respectivamente (embora se houver um elemento
+                        mais semântico, use-o). <code>&lt;b&gt;</code> destina-se
+                        a destacar palavras ou frases sem transmitir importância
+                        adicional, enquanto <code>&lt;i&gt;</code> é
+                        principalmente para voz, termos técnicos, etc.
+                    </p>
+
+                    <h3>
+                        Endereços
+                    </h3>
+
+                    <p>
+                        O elemento <code>&lt;address&gt;</code> é usado para
+                        informações de contato de seu ancestral mais próximo
+                        ou de todo o corpo do trabalho. Aqui estão dois
+                        exemplos de como ele pode ser usado:
+                    </p>
+
+                    <div class="row">
+                        <div class="span4">
+                            <address>
+                                <strong>bWrite, Inc.</strong>
+                                <br>
+
+                                São Paulo, São Paulo Ap 103<br>
+                                Rua dos pinheirinhos<br>
+
+                               <abbr title="Phone">
+                                    Telefone:
+                                </abbr> (11) 9 8002-2829
+                            </address>
+                        </div>
+
+                        <div class="span4">
+                            <address>
+                                <strong>
+                                    Nome completo
+                                </strong>
+                                <br>
+
+                                <a mailto="">
+                                    example.getbootstrap@bwritec.com.br
+                                </a>
+                            </address>
+                        </div>
+                    </div>
+
+                    <p>
+                        <strong>Observação:</strong> Cada linha em um
+                        <code>&lt;address&gt;</code> deve terminar com uma
+                        quebra de linha (<code>&lt;br&gt;</code>) ou ser
+                        encapsulado em uma tag em nível de bloco (por exemplo,
+                        <code>&lt;p&gt;</code>) estruturar adequadamente o
+                        conteúdo.
+                    </p>
+
+                    <h3>
+                        Abreviações
+                    </h3>
+
+                    <p>
+                        Para abreviações e siglas, use a tag
+                        <code>&lt;abbr&gt;</code> (<code>&lt;acronym&gt;</code>
+                        está obsoleto em <abbr title="HyperText Markup Langugage 5">HTML5</abbr>).
+                        Coloque o formulário abreviado dentro da tag e defina
+                        um título para o nome completo.
+                    </p>
+                </div>
+            </div>
+
+            <!--
+              - Blockquotes.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Blockquotes
+                    </h2>
+
+                    <p>
+                        <code>&lt;blockquote&gt;</code>
+                        <code>&lt;p&gt;</code>
+                        <code>&lt;small&gt;</code>
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <h3>
+                        Como citar
+                    </h3>
+
+                    <p>
+                        Para incluir uma citação em bloco, envolva
+                        <code>&lt;blockquote&gt;</code> em volta de tags
+                        <code>&lt;p&gt;</code> e <code>&lt;small&gt;</code>.
+                        Use o elemento <code>&lt;small&gt;</code> para citar
+                        sua fonte e você receberá um travessão
+                        <code>&amp;mdash;</code> antes disso.
+                    </p>
+
+                    <blockquote>
+                        <p>
+                            Fique tranquila, me ame, hoje, ontem, desejos
+                            sofridos por você, você, minha vida, meu tudo,
+                            adeus. Oh, continue a me amar, jamais duvide do
+                            coração fiel de seu amado.
+                        </p>
+
+                        <small>
+                            Apélido: Pirulito
+                        </small>
+                    </blockquote>
+
+                    <pre class="prettyprint linenums">
+&lt;blockquote&gt;
+    &lt;p&gt;
+        Fique tranquila, me ame, hoje, ontem, desejos
+        sofridos por você, você, minha vida, meu tudo,
+        adeus. Oh, continue a me amar, jamais duvide do
+        coração fiel de seu amado.
+    &lt;/p&gt;
+
+    &lt;small&gt;
+        Apélido: Pirulito
+    &lt;/small&gt;
+&lt;/blockquote&gt;</pre>
+                </div>
+            </div>
+
+            <h2>
+                Listas
+            </h2>
+
+            <div class="row">
+                <div class="span4">
+                    <h4>
+                        Não ordenado <code>&lt;ul&gt;</code>
+                    </h4>
+
+                    <ul>
+                        <li>Pirulito</li>
+                        <li>Docinho</li>
+                        <li>Vara</li>
+                        <li>Mandioca</li>
+
+                        <li>Meus Colegas
+                            <ul>
+                                <li>Ana</li>
+                                <li>Carolina</li>
+                                <li>Vitória</li>
+                                <li>Amanda</li>
+                                <li>Sabrina</li>
+                                <li>Yasmin</li>
+                            </ul>
+                        </li>
+
+                        <li>Charopinho</li>
+                        <li>Maluquinho</li>
+                        <li>Cebolinha</li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <h4>
+                        Sem estilo <code>&lt;ul.unstyled&gt;</code>
+                    </h4>
+
+                    <ul class="unstyled">
+                        <li>Pirulito</li>
+                        <li>Docinho</li>
+                        <li>Vara</li>
+                        <li>Mandioca</li>
+
+                        <li>Meus Colegas
+                            <ul>
+                                <li>Ana</li>
+                                <li>Carolina</li>
+                                <li>Vitória</li>
+                                <li>Amanda</li>
+                                <li>Sabrina</li>
+                                <li>Yasmin</li>
+                            </ul>
+                        </li>
+
+                        <li>Charopinho</li>
+                        <li>Maluquinho</li>
+                        <li>Cebolinha</li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <h4>
+                        Ordenado <code>&lt;ol&gt;</code>
+                    </h4>
+
+                    <ol>
+                        <li>Pirulito</li>
+                        <li>Docinho</li>
+                        <li>Vara</li>
+                        <li>Mandioca</li>
+
+                        <li>Meus Colegas
+                            <ol>
+                                <li>Ana</li>
+                                <li>Carolina</li>
+                                <li>Vitória</li>
+                                <li>Amanda</li>
+                                <li>Sabrina</li>
+                                <li>Yasmin</li>
+                            </ol>
+                        </li>
+
+                        <li>Charopinho</li>
+                        <li>Maluquinho</li>
+                        <li>Cebolinha</li>
+                    </ol>
+                </div>
+
+                <div class="span4">
+                    <h4>
+                        Descrição <code>dl</code>
+                    </h4>
+
+                    <dl>
+                        <dt>
+                            Listas de descrição
+                        </dt>
+
+                        <dd>
+                            Uma lista de descrição é perfeita para definir termos.
+                        </dd>
+
+                        <dt>
+                            Submissa
+                        </dt>
+
+                        <dd>
+                            Eu não sei como te dizer o quanto sinto sua falta.
+                            Eu te amo tanto que meu coração
+                        </dd>
+
+                        <dd>
+                            poderia explodir. Tudo o que amo, tudo o que
+                        </dd>
+
+                        <dt>
+                            quero, tudo
+                        </dt>
+
+                        <dd>
+                            o que preciso é você – para sempre.
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Código
+                    </h2>
+
+                    <p>
+                        <code>&lt;code&gt;</code>
+                        <code>&lt;pre&gt;</code>
+                    </p>
+
+                    <p>
+                        Melhore seu código com estilo com duas tags simples.
+                        Para ainda mais maravilhas por meio do javascript,
+                        acesse a biblioteca de embelezamento de código do
+                        Google e pronto.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <h3>
+                        Apresentando código
+                    </h3>
+
+                    <p>
+                        Código, blocos ou apenas trechos embutidos, podem ser
+                        exibidos com estilo apenas envolvendo a tag correta.
+                        Para blocos de código que abrangem várias linhas, use
+                        o elemento <code>&lt;pre&gt;</code>. Para código
+                        embutido, use o elemento <code>&lt;code&gt;</code>.
+                    </p>
+
+                    <table class="zebra-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 190px;">
+                                    Elemento
+                                </th>
+
+                                <th>
+                                    Resultado
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code>&lt;code&gt;</code>
+                                </td>
+
+                                <td>
+                                    Em uma linha de texto como esta, seu código
+                                    encapsulado ficará assim, elemento
+                                    <code>&lt;html&gt;</code>.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>&lt;pre&gt;</code>
+                                </td>
+
+                                <td>
+                                    <pre>&lt;div&gt;
+    &lt;h1&gt;
+        Título
+    &lt;/h1&gt;
+
+    &lt;p&gt;
+        Algo bem aqui...
+    &lt;/p&gt;
+&lt;/div&gt;</pre>
+
+                                    <p>
+                                        <strong>Observação:</strong> Certifique-se
+                                        de manter o código dentro das tags
+                                        <code>pre</code> o mais próximo possível
+                                        da esquerda; ele renderizará todas as
+                                        guias.
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>&lt;pre class="prettyprint"&gt;</code>
+                                </td>
+
+                                <td>
+                                    <p>
+                                        Usando a biblioteca google-code-prettify,
+                                        seus blocos de código obtêm um estilo
+                                        visual ligeiramente diferente e destaque
+                                        automático de sintaxe.
+                                    </p>
+
+                                    <pre class="prettyprint">&lt;div&gt;
+    &lt;h1&gt;
+        Título
+    &lt;/h1&gt;
+
+    &lt;p&gt;
+        Algo bem aqui...
+    &lt;/p&gt;
+&lt;/div&gt;</pre>
+
+                                    <p>
+                                        <a href="https://code.google.com/p/google-code-prettify/">
+                                            Baixar google-code-prettify
+                                        </a>
+
+                                        e veja o leia-me sobre como usar.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!--
+              - Labels.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Labels inline
+                    </h2>
+
+                    <p>
+                        <code>&lt;span class="label"&gt;</code>
+                    </p>
+
+                    <p>
+                        Chame a atenção ou sinalize qualquer frase no
+                        corpo do texto.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <h3>
+                        Label em qualquer coisa
+                    </h3>
+
+                    <p>
+                        Já precisou de um desses sinalizadores chiques
+                        <span class="label success">Novo !</span> ou
+                        <span class="label important">Importante</span>
+                        ao escrever código ? Bem, agora você os tem. Aqui
+                        está o que está incluído por padrão:
+                    </p>
+
+                    <table class="zebra-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">
+                                    Label
+                                </th>
+
+                                <th>
+                                    Resultado
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code>&lt;span class="label"&gt;Padrão&lt;/span&gt;</code>
+                                </td>
+
+                                <td>
+                                    <span class="label">
+                                        Padrão
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>&lt;span class="label success"&gt;Novo&lt;/span&gt;</code>
+                                </td>
+
+                                <td>
+                                    <span class="label success">
+                                        Novo
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>&lt;span class="label warning"&gt;Aviso&lt;/span&gt;</code>
+                                </td>
+
+                                <td>
+                                    <span class="label warning">
+                                        Aviso
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>&lt;span class="label important"&gt;Importante&lt;/span&gt;</code>
+                                </td>
+
+                                <td>
+                                    <span class="label important">
+                                        Importante
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>&lt;span class="label notice"&gt;Informação&lt;/span&gt;</code>
+                                </td>
+
+                                <td>
+                                    <span class="label notice">
+                                        Informação
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Media.
+         -->
+        <section id="media">
+            <div class="page-header">
+                <h1>
+                    Media
+
+                    <small>
+                        Exibindo imagens e vídeos
+                    </small>
+                </h1>
+            </div>
+
+            <!--
+              - Estrutura da tabela.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Régua de Media
+                    </h2>
+
+                    <p>
+                        Exiba miniaturas de tamanhos variados em páginas
+                        com pouca pegada HTML e estilos mínimos.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <h3>
+                        Exemplo de miniaturas
+                    </h3>
+
+                    <p>
+                        Miniaturas no <code>.media-grid</code> podem ter
+                        qualquer tamanho, mas funcionam melhor quando
+                        mapeados diretamente no sistema de régua integrado
+                        do Bootstrap. Larguras de imagem como 90, 210 e 330
+                        combinam-se com alguns pixels de preenchimento para
+                        igualar os tamanhos de coluna <code>.span2</code>,
+                        <code>.span4</code>, e <code>.span6</code>.
+                    </p>
+
+                    <h4>
+                        Grande
+                    </h4>
+
+                    <ul class="media-grid">
+                        <li>
+                            <a href="#">
+                                <img class="thumbnail" src="assets/img/330x230.png" alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img class="thumbnail" src="assets/img/330x230.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4>
+                        Médio
+                    </h4>
+
+                    <ul class="media-grid">
+                        <li>
+                            <a href="#">
+                                <img class="thumbnail" src="assets/img/210x150.png" alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img class="thumbnail" src="assets/img/210x150.png" alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img class="thumbnail" src="assets/img/210x150.png" alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img class="thumbnail" src="assets/img/210x150.png" alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img class="thumbnail" src="assets/img/210x150.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4>
+                        Pequeno
+                    </h4>
+
+                    <ul class="media-grid">
+                        <li>
+                            <a href="#">
+                                <img class="thumbnail" src="assets/img/90x90.png" alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img class="thumbnail" src="assets/img/90x90.png" alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img class="thumbnail" src="assets/img/90x90.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4>
+                        Codificando-os
+                    </h4>
+
+                    <p>
+                        As réguas de mídia são fáceis de usar e bastante
+                        simples no lado da marcação. Suas dimensões são
+                        puramente baseadas no tamanho das imagens
+                        incluídas.
+                    </p>
+
+                    <pre class="prettyprint linenums">
+&lt;ul class="media-grid"&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            &lt;img class="thumbnail" src="assets/img/330x230.png" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            &lt;img class="thumbnail" src="assets/img/330x230.png" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Tabelas.
+         -->
+        <section id="tables">
+            <div class="page-header">
+                <h1>
+                    Tabelas
+                    <small>
+                        Pois, você adivinhou, dados tabulares
+                    </small>
+                </h1>
+            </div>
+
+            <!--
+              - Estrutura da tabela.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Construindo mesas
+                    </h2>
+
+                    <p>
+                        <code>&lt;table&gt;</code>
+                        <code>&lt;thead&gt;</code>
+                        <code>&lt;tbody&gt;</code>
+                        <code>&lt;tr&gt;</code>
+                        <code>&lt;th&gt;</code>
+                        <code>&lt;td&gt;</code>
+                        <code>&lt;colspan&gt;</code>
+                        <code>&lt;caption&gt;</code>
+                    </p>
+
+                    <p>
+                        As tabelas são ótimas para muitas coisas. Grids
+                        tabelas, no entanto, precisam de um pouco de marcação
+                        para serem úteis, escalonáveis e legíveis (no nível do
+                        código). Aqui estão algumas dicas para ajudar.
+                    </p>
+
+                    <p>
+                        Sempre coloque os cabeçalhos das colunas em um
+                        <code>&lt;thead&gt;</code> tal que a hierarquia seja
+                        <code>&lt;thead&gt;</code> > <code>&lt;tr&gt;</code> >
+                        <code>&lt;th&gt;</code>.
+                    </p>
+
+                    <p>
+                        Semelhante aos títulos das colunas, todo o conteúdo
+                        do corpo da sua tabela deve ser agrupado em um
+                        <code>&lt;tbody&gt;</code> então sua hierarquia é
+                        <code>&lt;tbody&gt;</code> > <code>&lt;tr&gt;</code> >
+                        <code>&lt;td&gt;</code>.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <h3>
+                        Exemplo: estilos de tabela padrão
+                    </h3>
+
+                    <p>
+                        Todas as tabelas serão estilizadas automaticamente
+                        apenas com as bordas essenciais para garantir a
+                        legibilidade e manter a estrutura. Não há necessidade
+                        de adicionar classes ou atributos extras.
+                    </p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+
+                                <th>
+                                    Nome
+                                </th>
+
+                                <th>
+                                    Sobrenome
+                                </th>
+
+                                <th>
+                                    Idioma
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Sabrina</td>
+                                <td>Santa</td>
+                                <td>Português</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Samara</td>
+                                <td>Tamiris</td>
+                                <td>Português</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Amanda</td>
+                                <td>Paula</td>
+                                <td>Português</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <pre class="prettyprint linenums">
+&lt;table&gt;
+    ...
+&lt;/table&gt;</pre>
+
+                    <h3>
+                        Exemplo: Zebra-striped
+                    </h3>
+
+                    <p>
+                        Seja um pouco sofisticado com suas tabelas adicionando
+                        listras de zebra - basta adicionar a classe
+                        <code>.zebra-striped</code>.
+                    </p>
+
+                    <table class="zebra-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+
+                                <th>
+                                    Nome
+                                </th>
+
+                                <th>
+                                    Sobrenome
+                                </th>
+
+                                <th>
+                                    Idioma
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Sabrina</td>
+                                <td>Santa</td>
+                                <td>Português</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Samara</td>
+                                <td>Tamiris</td>
+                                <td>Português</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Amanda</td>
+                                <td>Paula</td>
+                                <td>Português</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        <strong>Observação:</strong> Zebra-striping é um
+                        aprimoramento progressivo não disponível para
+                        navegadores mais antigos, como o IE8 e anteriores.
+                    </p>
+
+                    <pre class="prettyprint linenums">
+&lt;table class="zebra-striped"&gt;
+...
+&lt;/table&gt;</pre>
+
+                    <h3>
+                        Exemplo: Zebra-striped w/ TableSorter.js.
+                    </h3>
+
+                    <p>
+                        Tomando o exemplo anterior, melhoramos a utilidade de
+                        nossas tabelas fornecendo funcionalidade de classificação
+                        via <a href="https://jquery.com/">jQuery</a> e o plugin
+                        <a href="https://mottie.github.io/tablesorter/docs/">Tablesorter</a>.
+                        <strong>Clique no título de qualquer coluna para alterar
+                        a classificação.</strong>
+                    </p>
+
+                    <table class="zebra-striped" id="sortTableExample">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+
+                                <th class="yellow">
+                                    Nome
+                                </th>
+
+                                <th class="blue">
+                                    Sobrenome
+                                </th>
+
+                                <th class="green">
+                                    Idioma
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Sabrina</td>
+                                <td>Santa</td>
+                                <td>Português</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Samara</td>
+                                <td>Tamiris</td>
+                                <td>Português</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Amanda</td>
+                                <td>Paula</td>
+                                <td>Português</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <pre class="prettyprint linenums">
+&lt;script src="js/jquery/jquery.tablesorter.min.js"&gt;&lt;/script&gt;
+&lt;script &gt;
+    $(function()
+    {
+        $("table#sortTableExample").tablesorter({
+            sortList: [
+                [
+                    1,
+                    0
+                ]
+            ]
+        });
+    });
+&lt;/script&gt;
+
+&lt;table class="zebra-striped"&gt;
+    ...
+&lt;/table&gt;</pre>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Formulários.
+         -->
+        <section id="forms">
+            <div class="page-header">
+                <h1>
+                    Formulários
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Estilos padrão
+                    </h2>
+
+                    <p>
+                        Todos os formulários recebem estilos padrão para
+                        apresentá-los de forma legível e escalonável. Os
+                        estilos são fornecidos para entradas de texto,
+                        listas de seleção, áreas de texto, botões de
+                        opção e caixas de seleção e botões.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <form>
+                        <fieldset>
+                            <legend>
+                                Exemplo de legenda de formulário
+                            </legend>
+
+                            <div class="clearfix">
+                                <label for="xlInput">
+                                    Entrada X-Large
+                                </label>
+
+                                <div class="input">
+                                    <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="normalSelect">
+                                    Selecione
+                                </label>
+
+                                <div class="input">
+                                    <select name="normalSelect" id="normalSelect">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="mediumSelect">
+                                    Selecione
+                                </label>
+
+                                <div class="input">
+                                    <select class="medium" name="mediumSelect" id="mediumSelect">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="multiSelect">
+                                    Seleção múltipla
+                                </label>
+
+                                <div class="input">
+                                    <select class="medium" multiple="multiple" name="multiSelect" id="multiSelect">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label>
+                                    Entrada não editável
+                                </label>
+
+                                <div class="input">
+                                    <span class="uneditable-input">
+                                        Algum valor aqui
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="disabledInput">
+                                    Entrada desabilitada
+                                </label>
+
+                                <div class="input">
+                                    <input
+                                        class="xlarge disabled"
+                                        id="disabledInput"
+                                        name="disabledInput"
+                                        size="30"
+                                        type="text"
+                                        placeholder="Entrada desativada aqui… continue."
+                                        disabled>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="disabledInput">
+                                    Área de texto desativada
+                                </label>
+
+                                <div class="input">
+                                    <textarea
+                                        class="xxlarge"
+                                        name="textarea"
+                                        id="textarea"
+                                        rows="3"
+                                        disabled></textarea>
+                                </div>
+                            </div>
+
+                            <div class="clearfix error">
+                                <label for="xlInput2">
+                                    Entrada X-Large
+                                </label>
+
+                                <div class="input">
+                                    <input class="xlarge error" id="xlInput2" name="xlInput2" size="30" type="text">
+
+                                    <span class="help-inline">
+                                        Pequeno trecho de texto de ajuda
+                                    </span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>
+                                Exemplo de legenda de formulário
+                            </legend>
+
+                            <div class="clearfix">
+                                <label for="prependedInput">
+                                    Texto acrescentado
+                                </label>
+
+                                <div class="input">
+                                    <div class="input-prepend">
+                                        <span class="add-on">
+                                            @
+                                        </span>
+
+                                        <input
+                                            class="medium"
+                                            id="prependedInput"
+                                            name="prependedInput"
+                                            size="16"
+                                            type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="prependedInput2">
+                                    Caixa de seleção anexada
+                                </label>
+
+                                <div class="input">
+                                    <div class="input-prepend">
+                                        <label class="add-on">
+                                            <input type="checkbox" name="" id="" value="">
+                                        </label>
+
+                                        <input
+                                            class="mini"
+                                            id="prependedInput2"
+                                            name="prependedInput2"
+                                            size="16"
+                                            type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="appendedInput">
+                                    Caixa de seleção anexada
+                                </label>
+
+                                <div class="input">
+                                    <div class="input-append">
+                                        <input
+                                            class="mini"
+                                            id="appendedInput"
+                                            name="appendedInput"
+                                            size="16"
+                                            type="text">
+
+                                        <label class="add-on active">
+                                            <input type="checkbox" name="" id="" value="" checked="checked">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="fileInput">
+                                    Entrada de arquivo
+                                </label>
+
+                                <div class="input">
+                                    <input class="input-file" id="fileInput" name="fileInput" type="file">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>
+                                Exemplo de legenda de formulário
+                            </legend>
+
+                            <div class="clearfix">
+                                <label id="optionsCheckboxes">
+                                    Lista de opções
+                                </label>
+
+                                <div class="input">
+                                    <ul class="inputs-list">
+                                        <li>
+                                            <label>
+                                                <input
+                                                    type="checkbox"
+                                                    name="optionsCheckboxes"
+                                                    value="option1">
+
+                                                <span>
+                                                    A primeira opção é esta e aquilo -
+                                                    certifique-se de incluir por que
+                                                    é ótimo
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <label>
+                                                <input
+                                                    type="checkbox"
+                                                    name="optionsCheckboxes"
+                                                    value="option2">
+
+                                                <span>
+                                                    A opção dois também pode ser
+                                                    verificada e incluída nos
+                                                    resultados do formulário.
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <label>
+                                                <input
+                                                    type="checkbox"
+                                                    name="optionsCheckboxes"
+                                                    value="option2">
+
+                                                <span>
+                                                    A opção três pode - sim, você
+                                                    adivinhou - também ser verificada e
+                                                    incluída nos resultados do formulário.
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <label class="disabled">
+                                                <input
+                                                    type="checkbox"
+                                                    name="optionsCheckboxes"
+                                                    value="option2"
+                                                    disabled>
+
+                                                <span>
+                                                    A opção quatro não pode ser
+                                                    marcada porque está desativada.
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                    <span class="help-block">
+                                        <strong>Observação:</strong> Os rótulos
+                                        circundam todas as opções para áreas de
+                                        clique muito maiores e um formato mais
+                                        utilizável.
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label>
+                                    Período
+                                </label>
+
+                                <div class="input">
+                                    <div class="inline-inputs">
+                                        <input class="small" type="text" value="Maio 1, 2011">
+                                        <input class="mini" type="text" value="12:00">
+
+                                        Para
+
+                                        <input class="small" type="text" value="Maio 8, 2011">
+                                        <input class="mini" type="text" value="11:59">
+
+                                        <span class="help-inline">
+                                            Todos os horários são mostrados como
+                                            Horário Padrão do Pacífico (GMT -08:00).
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="textarea">
+                                    Textarea
+                                </label>
+
+                                <div class="input">
+                                    <textarea
+                                        class="xxlarge"
+                                        id="textarea2"
+                                        name="textarea2"
+                                        rows="3"></textarea>
+
+                                    <span class="help-block">
+                                        Bloco de texto de ajuda para descrever o
+                                        campo acima, se necessário.
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label id="optionsRadio">
+                                    Lista de opções
+                                </label>
+
+                                <div class="input">
+                                    <ul class="inputs-list">
+                                        <li>
+                                            <label>
+                                                <input
+                                                    type="radio"
+                                                    checked
+                                                    name="optionsRadios"
+                                                    value="option1">
+
+                                                <span>
+                                                    A primeira opção é esta e aquilo -
+                                                    certifique-se de incluir por que
+                                                    é ótimo.
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <label>
+                                                <input
+                                                    type="radio"
+                                                    name="optionsRadios"
+                                                    value="option2">
+
+                                                <span>
+                                                    A opção dois pode ser outra
+                                                    coisa e selecioná-la desmarcará
+                                                    as opções 1
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="actions">
+                                <input type="submit" class="btn primary" value="Salvar alterações">
+                                <button type="reset" class="btn">
+                                    Cancelar
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Formulários empilhados
+                    </h2>
+
+                    <p>
+                        Adicionar <code>.form-stacked</code> ao HTML do seu
+                        formulário e você terá rótulos na parte superior dos
+                        campos, em vez de à esquerda. Isso funciona muito bem
+                        se seus formulários forem curtos ou se você tiver duas
+                        colunas de entradas para formulários mais pesados.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <form action="" class="form-stacked">
+                        <fieldset>
+                            <legend>
+                                Exemplo de legenda de formulário
+                            </legend>
+
+                            <div class="clearfix">
+                                <label for="xlInput3">
+                                    Entrada X-Large
+                                </label>
+
+                                <div class="input">
+                                    <input
+                                        class="xlarge"
+                                        id="xlInput3"
+                                        name="xlInput3"
+                                        size="30"
+                                        type="text">
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="stackedSelect">
+                                    Selecionar
+                                </label>
+
+                                <div class="input">
+                                    <select name="stackedSelect" id="stackedSelect">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>
+                                Exemplo de legenda de formulário
+                            </legend>
+
+                            <div class="clearfix error">
+                                <label for="xlInput4">
+                                    Entrada X-Large
+                                </label>
+
+                                <div class="input">
+                                    <input
+                                        class="xlarge error"
+                                        id="xlInput4"
+                                        name="xlInput4"
+                                        size="30"
+                                        type="text">
+
+                                    <span class="help-inline">
+                                        Pequeno trecho de texto de ajuda
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label id="optionsCheckboxes">
+                                    Lista de opções
+                                </label>
+
+                                <div class="input">
+                                    <ul class="inputs-list">
+                                        <li>
+                                            <label>
+                                                <input
+                                                    type="checkbox"
+                                                    name="optionsCheckboxes"
+                                                    value="option1">
+
+                                                <span>
+                                                    A primeira opção é esta e aquilo -
+                                                    certifique-se de incluir por que
+                                                    é ótimo
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <label>
+                                                <input
+                                                    type="checkbox"
+                                                    name="optionsCheckboxes"
+                                                    value="option2">
+
+                                                <span>
+                                                    A opção dois também pode ser verificada e
+                                                    incluída nos resultados do formulário.
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                    <span class="help-block">
+                                        <strong>Observação:</strong> Os rótulos
+                                        circundam todas as opções para áreas de
+                                        clique muito maiores e um formato mais
+                                        utilizável.
+                                    </span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="actions">
+                            <button type="submit" class="btn primary">
+                                Salvar alterações
+                            </button>
+
+                            <button type="reset" class="btn">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Tamanhos de campo de formulário
+                    </h2>
+
+                    <p>
+                        Personalize qualquer formulário <code>input</code>,
+                        <code>select</code>, ou <code>textarea</code> largura
+                        adicionando apenas algumas classes à sua marcação.
+                    </p>
+
+                    <p>
+                        A partir da v1.3.0, adicionamos classes de
+                        dimensionamento baseadas em régua para elementos de
+                        formulário. <strong>Por favor, use estes em vez das
+                        classes existentes <code>.mini</code>, <code>.small</code>,
+                        etc.</strong>
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <form action="">
+                        <div class="clearfix">
+                            <input
+                                class="span2"
+                                id=""
+                                name=""
+                                type="text"
+                                placeholder=".span2">
+                        </div>
+
+                        <div class="clearfix">
+                            <input
+                                class="span3"
+                                id=""
+                                name=""
+                                type="text"
+                                placeholder=".span3">
+                        </div>
+
+                        <div class="clearfix">
+                            <input
+                                class="span4"
+                                id=""
+                                name=""
+                                type="text"
+                                placeholder=".span4">
+                        </div>
+
+                        <div class="clearfix">
+                            <input
+                                class="span5"
+                                id=""
+                                name=""
+                                type="text"
+                                placeholder=".span5">
+                        </div>
+
+                        <div class="clearfix">
+                            <input
+                                class="span6"
+                                id=""
+                                name=""
+                                type="text"
+                                placeholder=".span6">
+                        </div>
+
+                        <div class="clearfix">
+                            <input
+                                class="span7"
+                                id=""
+                                name=""
+                                type="text"
+                                placeholder=".span7">
+                        </div>
+
+                        <div class="clearfix">
+                            <input
+                                class="span8"
+                                id=""
+                                name=""
+                                type="text"
+                                placeholder=".span8">
+                        </div>
+
+                        <div class="clearfix">
+                            <input
+                                class="span9"
+                                id=""
+                                name=""
+                                type="text"
+                                placeholder=".span9">
+                        </div>
+
+                        <div class="clearfix">
+                            <input
+                                class="span10"
+                                id=""
+                                name=""
+                                type="text"
+                                placeholder=".span10">
+                        </div>
+
+                        <div class="clearfix">
+                            <input
+                                class="span11"
+                                id=""
+                                name=""
+                                type="text"
+                                placeholder=".span11">
+                        </div>
+
+                        <div class="clearfix">
+                            <input
+                                class="span12"
+                                id=""
+                                name=""
+                                type="text"
+                                placeholder=".span12">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Botões
+                    </h2>
+
+                    <p>
+                        Por convenção, os botões são usados para ações enquanto
+                        os links são usados para objetos. Por exemplo, “Baixar”
+                        pode ser um botão e “atividade recente” pode ser um
+                        link.
+                    </p>
+
+                    <p>
+                        Todos os botões têm como padrão um estilo cinza claro,
+                        mas diversas classes funcionais podem ser aplicadas
+                        para diferentes estilos de cores. Essas classes
+                        incluem uma classe azul <code>.primary</code>, uma
+                        classe azul claro <code>.info</code>, uma classe verde
+                        <code>.success</code>, e uma classe vermelho
+                        <code>.danger</code>.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <h3>
+                        Botões de exemplo
+                    </h3>
+
+                    <p>
+                        Os estilos de botão podem ser aplicados a qualquer
+                        coisa com o <code>.btn</code> aplicado. Normalmente,
+                        você desejará aplicá-los apenas <code>&lt;a&gt;</code>,
+                        <code>&lt;button&gt;</code>, e elementos select
+                        <code>&lt;input&gt;</code>. Veja como parece:
+                    </p>
+
+                    <div class="well" style="padding: 14px 19px;">
+                        <button class="btn primary">Primário</button>
+                        <button class="btn">Padrão</button>
+                        <button class="btn info">Informação</button>
+                        <button class="btn success">Sucesso</button>
+                        <button class="btn danger">Perigo</button>
+                    </div>
+
+                    <h3>
+                        Tamanhos alternativos
+                    </h3>
+
+                    <p>
+                        Quer botões maiores ou menores? Têm-no !
+                    </p>
+
+                    <div class="well">
+                        <a href="#" class="btn large primary">
+                            Ação Primária
+                        </a>
+
+                        <a href="#" class="btn large">
+                            Ação
+                        </a>
+                    </div>
+
+                    <div class="well" style="padding: 16px 19px;">
+                        <a href="#" class="btn small primary">
+                            Ação Primária
+                        </a>
+
+                        <a href="#" class="btn small">
+                            Ação
+                        </a>
+                    </div>
+
+                    <h3>
+                        Estado desativado
+                    </h3>
+
+                    <p>
+                        Para botões que não estão ativos ou que foram
+                        desativados pelo aplicativo por um motivo ou outro,
+                        use o estado desativado. Isso é <code>.disabled</code>
+                        para links e <code>:disabled</code> para elementos
+                        <code>&lt;button&gt;</code>.
+                    </p>
+
+                    <h4>
+                        Links
+                    </h4>
+
+                    <div class="well">
+                        <a href="#" class="btn large primary disabled">
+                            Ação Primária
+                        </a>
+
+                        <a href="#" class="btn large disabled">
+                            Ação
+                        </a>
+                    </div>
+
+                    <h4>
+                        Botões
+                    </h4>
+
+                    <div class="well">
+                        <button class="btn large primary disabled" disabled="disabled">
+                            Ação Primária
+                        </button>
+
+                        <button class="btn large" disabled>
+                            Ação
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Navegação.
+         -->
+        <section id="navigation">
+            <div class="page-header">
+                <h1>
+                    Navegação
+                </h1>
+            </div>
+
+            <h2>
+                Topbar Fixo
+            </h2>
+
+            <div class="topbar-wrapper" style="z-index: 5;">
+                <div class="topbar" data-dropdown="dropdown" >
+                    <div class="topbar-inner">
+                        <div class="container">
+                            <h3>
+                                <a href="#">
+                                    Nome Do Projeto
+                                </a>
+                            </h3>
+
+                            <ul class="nav">
+                                <li class="active">
+                                    <a href="#">
+                                        Casa
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        Link
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        Link
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        Link
+                                    </a>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle">
+                                        DropDown
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">
+                                                Link Secundário
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                Outra coisa aqui
+                                            </a>
+                                        </li>
+
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="#">
+                                                Outro link
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <form class="pull-left" action="">
+                                <input type="text" placeholder="Buscar">
+                            </form>
+
+                            <ul class="nav secondary-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle">
+                                        DropDown
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">
+                                                Link Secundário
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                Outra coisa aqui
+                                            </a>
+                                        </li>
+
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="#">
+                                                Outro link
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span5">
+                    <h4>
+                        O que é
+                    </h4>
+
+                    <p>
+                        Nossa barra superior é uma barra fixa que abriga o
+                        logotipo ou nome de um site, a navegação principal
+                        e o formulário de pesquisa.
+                    </p>
+                </div>
+
+                <div class="span5">
+                    <h4>
+                        Customizável
+                    </h4>
+
+                    <p>
+                        Todos os elementos contidos nele, e também toda a
+                        barra superior, são opcionais. Você pode optar por
+                        incluir um logotipo/nome, navegação, pesquisa e uma
+                        navegação secundária - ou qualquer combinação disso.
+                    </p>
+                </div>
+
+                <div class="span6">
+                    <h4>
+                        Dropdowns incluído
+                    </h4>
+
+                    <p>
+                        Como parte da navegação principal, incluímos a
+                        capacidade de adicionar menus suspensos à sua
+                        navegação. Confira a navegação secundária acima
+                        (alinhada à direita) para ver como isso é feito.
+                        As tags <code>li</code> dos menus suspensos também
+                        suportam <code>.active</code> para mostrar a seleção
+                        de página atual.
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                <strong>Observação:</strong> Ao usar a barra superior em
+                qualquer página, leve em consideração a sobreposição que
+                ela causa adicionando <code>padding-top: 40px;</code>
+                para o seu <code>body</code>.
+            </p>
+
+            <br>
+
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Tabs e pills
+                    </h2>
+
+                    <p>
+                        Crie uma navegação secundária simples com um
+                        <code>&lt;ul&gt;</code>. Troque entre pastilhas
+                        ou comprimidos adicionando a classe apropriada.
+                    </p>
+
+                    <p>
+                        Ótimo para subseções de conteúdo, como nossas páginas
+                        de configurações de conta e cronogramas de usuários,
+                        para alternar entre páginas de conteúdo semelhante.
+                        Disponível em estilos com guias ou comprimidos.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <ul class="tabs">
+                        <li class="active">
+                            <a href="#">
+                                Casa
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Perfil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Mensagens
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Configurações
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Contato
+                            </a>
+                        </li>
+
+                        <li class="dropdown" data-dropdown="dropdown">
+                            <a href="#" class="dropdown-toggle">
+                                DropDown
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">
+                                        Link Secundário
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        Outra coisa aqui
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        Outro link
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <pre class="prettyprint linenums">
+&lt;ul class="tabs"&gt;
+    &lt;li class="active"&gt;
+        &lt;a href="#"&gt;
+            Casa
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            Perfil
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            Mensagens
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            Configurações
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            Contato
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+                    <ul class="pills">
+                        <li class="active">
+                            <a href="#">
+                                Casa
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Perfil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Mensagens
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Configurações
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Contato
+                            </a>
+                        </li>
+                    </ul>
+
+                    <pre class="prettyprint linenums">
+&lt;ul class="pills"&gt;
+    &lt;li class="active"&gt;
+        &lt;a href="#"&gt;
+            Casa
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            Perfil
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            Mensagens
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            Configurações
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            Contato
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+                </div>
+            </div>
+
+            <!--
+              - Breadcrumbs.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Breadcrumbs
+                    </h2>
+
+                    <p>
+                        A navegação estrutural é usada como uma forma de
+                        mostrar aos usuários onde eles estão em um aplicativo
+                        ou site, mas não para navegação primária.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <ul class="breadcrumb">
+                        <li class="active">
+                            Casa
+                        </li>
+                    </ul>
+
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">
+                                Casa
+                            </a>
+
+                            <span class="divider">
+                                /
+                            </span>
+                        </li>
+
+                        <li class="active">
+                            Página intermediária
+                        </li>
+                    </ul>
+
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">
+                                Casa
+                            </a>
+
+                            <span class="divider">
+                                /
+                            </span>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Página intermediária
+                            </a>
+
+                            <span class="divider">
+                                /
+                            </span>
+                        </li>
+
+                        <li class="active">
+                            Outro
+                        </li>
+                    </ul>
+
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">
+                                Casa
+                            </a>
+
+                            <span class="divider">
+                                /
+                            </span>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Página intermediária
+                            </a>
+
+                            <span class="divider">
+                                /
+                            </span>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Outro
+                            </a>
+
+                            <span class="divider">
+                                /
+                            </span>
+                        </li>
+
+                        <li class="active">
+                            Você está aqui
+                        </li>
+                    </ul>
+
+                    <pre class="prettyprint linenums">
+&lt;ul class="breadcrumb"&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            Casa
+        &lt;/a&gt;
+
+        &lt;span class="divider"&gt;
+            /
+        &lt;/span&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            Página intermediária
+        &lt;/a&gt;
+
+        &lt;span class="divider"&gt;
+            /
+        &lt;/span&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            Outro
+        &lt;/a&gt;
+
+        &lt;span class="divider"&gt;
+            /
+        &lt;/span&gt;
+    &lt;/li&gt;
+
+    &lt;li class="active"&gt;
+        Você está aqui
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+                </div>
+            </div>
+
+            <!--
+              - Paginação.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Paginação
+                    </h2>
+
+                    <p>
+                        Paginação ultra simplista e com estilo minimalista
+                        inspirada no Rdio. O bloco grande é difícil de perder,
+                        facilmente escalonável e oferece grandes áreas de
+                        clique.
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <div class="pagination">
+                        <ul>
+                            <li class="prev disabled">
+                                <a href="#">
+                                    &larr; Anterior
+                                </a>
+                            </li>
+
+                            <li class="active">
+                                <a href="#">
+                                    1
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    2
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    3
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    4
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    5
+                                </a>
+                            </li>
+
+                            <li class="next">
+                                <a href="#">
+                                    Próximo &raquo;
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pagination">
+                        <ul>
+                            <li class="prev">
+                                <a href="#">
+                                    &larr; Anterior
+                                </a>
+                            </li>
+
+                            <li class="active">
+                                <a href="#">
+                                    10
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    11
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    12
+                                </a>
+                            </li>
+
+                            <li class="disabled">
+                                <a href="#">
+                                    ...
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    19
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    20
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    21
+                                </a>
+                            </li>
+
+                            <li class="next">
+                                <a href="#">
+                                    Próximo &raquo;
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pagination">
+                        <ul>
+                            <li class="prev">
+                                <a href="#">
+                                    &larr; Anterior
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    10
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    11
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    12
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    13
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    14
+                                </a>
+                            </li>
+
+                            <li class="active">
+                                <a href="#">
+                                    15
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    16
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    17
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    18
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    19
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    20
+                                </a>
+                            </li>
+
+                            <li class="next">
+                                <a href="#">
+                                    Próximo &raquo;
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+    &lt;ul&gt;
+        &lt;li class="prev disabled"&gt;
+            &lt;a href="#"&gt;
+                &amp;larr; Anterior
+            &lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li class="active"&gt;
+            &lt;a href="#"&gt;
+                1
+            &lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li&gt;
+            &lt;a href="#"&gt;
+                2
+            &lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li&gt;
+            &lt;a href="#"&gt;
+                3
+            &lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li&gt;
+            &lt;a href="#"&gt;
+                4
+            &lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li&gt;
+            &lt;a href="#"&gt;
+                5
+            &lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li class="next"&gt;
+            &lt;a href="#"&gt;
+                Próximo &amp;rarr;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Alerts & Messages.
+         -->
+        <section id="alerts">
+            <div class="page-header">
+                <h1>
+                    Alertas &amp; Erros
+
+                    <small>
+                        Estilos para mensagens ou alertas de sucesso,
+                        aviso e erro.
+                    </small>
+                </h1>
+            </div>
+
+            <!--
+              - Mensagens de alerta básicas.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Alertas básicos
+                    </h2>
+
+                    <p>
+                        <code>.alert-message</code>
+                    </p>
+
+                    <p>
+                        Mensagens de uma linha para destacar a falha, possível
+                        falha ou sucesso de uma ação. Particularmente útil para
+                        formulários.
+                    </p>
+
+                    <p>
+                        <a class="btn js-btn" href="./javascript.html#alerts">
+                            Obter o javascript &raquo;
+                        </a>
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <div class="alert-message warning">
+                        <a class="close" href="#">
+                            &times;
+                        </a>
+
+                        <p>
+                            <strong>
+                                Um bom exemplo !
+                            </strong>
+
+                            Melhor verificar você mesmo, você não está
+                            parecendo muito bem.
+                        </p>
+                    </div>
+
+                    <div class="alert-message error">
+                        <a class="close" href="#">
+                            &times;
+                        </a>
+
+                        <p>
+                            <strong>
+                                Oh pressão !
+                            </strong>
+
+                            Mude isso e aquilo e tente novamente.
+                        </p>
+                    </div>
+
+                    <div class="alert-message success">
+                        <a class="close" href="#">
+                            &times;
+                        </a>
+
+                        <p>
+                            <strong>
+                                Bom trabalho !
+                            </strong>
+
+                            Você leu com sucesso esta mensagem de alerta.
+                        </p>
+                    </div>
+
+                    <div class="alert-message info">
+                        <a class="close" href="#">
+                            &times;
+                        </a>
+
+                        <p>
+                            <strong>
+                                Atenção !
+                            </strong>
+
+                            Este é um alerta que precisa de sua atenção, mas
+                            ainda não é uma grande prioridade.
+                        </p>
+                    </div>
+
+                    <h4>
+                        Código de exemplo
+                    </h4>
+
+                    <pre class="prettyprint linenums">
+&lt;div class="alert-message warning"&gt;
+    &lt;a class="close" href="#"&gt;
+        &times;
+    &lt;/a&gt;
+
+    &lt;p&gt;
+        &lt;strong&gt;
+            Um bom exemplo !
+        &lt;/strong&gt;
+
+        Melhor verificar você mesmo, você não está
+        parecendo muito bem.
+    &lt;/p&gt;
+&lt;/div&gt;</pre>
+                </div>
+            </div>
+
+            <!--
+              - Mensagens em bloco.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Mensagens em bloco
+                    </h2>
+
+                    <p>
+                        <code>.alert-message.block-message</code>
+                    </p>
+
+                    <p>
+                        Para mensagens que exigem um pouco de explicação,
+                        temos alertas em estilo de parágrafo. Eles são
+                        perfeitos para exibir mensagens de erro mais longas,
+                        avisar o usuário sobre uma ação pendente ou apenas
+                        apresentar informações para dar mais ênfase à
+                        página.
+                    </p>
+
+                    <p>
+                        <a class="btn js-btn" href="./javascript.html#alerts">
+                            Obter o javascript &raquo;
+                        </a>
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <div class="alert-message block-message warning">
+                        <a class="close" href="#">
+                            &times;
+                        </a>
+
+                        <p>
+                            <strong>
+                                Um bom exemplo ! Isso é um aviso !
+                            </strong>
+
+                            Melhor verificar você mesmo, você não está parecendo
+                            muito bem. Fique tranquila, me ame, hoje, ontem,
+                            desejos sofridos por você, você, minha vida, meu
+                            tudo, adeus. Oh, continue a me amar, jamais duvide
+                            do coração fiel de seu amado.
+                        </p>
+
+                        <div class="alert-actions">
+                            <a class="btn small" href="#">
+                                Tome esta ação
+                            </a>
+
+                            <a class="btn small" href="#">
+                                Ou faça isso
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="alert-message block-message error">
+                        <a class="close" href="#">
+                            &times;
+                        </a>
+
+                        <p>
+                            <strong>
+                                Oh estalo ! Você tem um erro !
+                            </strong>
+
+                            Mude isso e aquilo e tente novamente.
+                        </p>
+
+                        <ul>
+                            <li>Fique tranquila, me ame, hoje, ontem,</li>
+                            <li>Desejos sofridos por você, você,</li>
+                            <li>Minha vida, meu tudo, adeus. Oh,</li>
+                        </ul>
+
+                        <div class="alert-actions">
+                            <a class="btn small" href="#">
+                                Tome esta ação
+                            </a>
+
+                            <a class="btn small" href="#">
+                                Ou faça isso
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="alert-message block-message success">
+                        <a class="close" href="#">
+                            &times;
+                        </a>
+
+                        <p>
+                            <strong>
+                                Bom trabalho !
+                            </strong>
+
+                            Você leu com sucesso esta mensagem de alerta. Fique
+                            tranquila, me ame, hoje, ontem, desejos sofridos por
+                            você, você, minha vida, meu tudo, adeus. Oh, continue
+                            a me amar, jamais duvide do coração fiel de seu amado.
+                        </p>
+
+                        <div class="alert-actions">
+                            <a class="btn small" href="#">
+                                Tome esta ação
+                            </a>
+
+                            <a class="btn small" href="#">
+                                Ou faça isso
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="alert-message block-message info">
+                        <a class="close" href="#">
+                            &times;
+                        </a>
+
+                        <p>
+                            <strong>
+                                Atenção !
+                            </strong>
+
+                            Este é um alerta que precisa de sua atenção,
+                            mas ainda não é uma grande prioridade.
+                        </p>
+
+                        <div class="alert-actions">
+                            <a class="btn small" href="#">
+                                Tome esta ação
+                            </a>
+
+                            <a class="btn small" href="#">
+                                Ou faça isso
+                            </a>
+                        </div>
+                    </div>
+
+                    <h4>
+                        Código de exemplo
+                    </h4>
+
+                    <pre class="prettyprint linenums">
+&lt;div class="alert-message block-message warning"&gt;
+    &lt;a class="close" href="#"&gt;
+        &times;
+    &lt;/a&gt;
+
+    &lt;p&gt;
+        &lt;strong&gt;
+            Um bom exemplo ! Isso é um aviso!
+        &lt;/strong&gt;
+
+        Melhor verificar você mesmo, você não está parecendo
+        muito bem. Fique tranquila, me ame, hoje, ontem,
+        desejos sofridos por você, você, minha vida, meu
+        tudo, adeus. Oh, continue a me amar, jamais duvide
+        do coração fiel de seu amado.
+    &lt;/p&gt;
+
+    &lt;div class="alert-actions"&gt;
+        &lt;a class="btn small" href="#"&gt;
+            Tome esta ação
+        &lt;/a&gt;
+
+        &lt;a class="btn small" href="#"&gt;
+            Ou faça isso
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Popovers.
+         -->
+        <section id="popovers">
+            <div class="page-header">
+                <h1>
+                    Popovers
+                    <small>
+                        Componentes para exibição de conteúdo em modais,
+                        dicas de ferramentas e popovers
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Modals
+                    </h2>
+
+                    <p>
+                        Os modais - caixas de diálogo ou lightboxes - são
+                        ótimos para ações contextuais em situações em que
+                        é importante que o contexto de fundo seja mantido.
+                    </p>
+
+                    <p>
+                        <a class="btn js-btn" href="./javascript.html#modal">
+                            Obter o javascript &raquo;
+                        </a>
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <div class="well" style="background-color: #888; border: none; padding: 40px;">
+                        <!--
+                          - Modal.
+                         -->
+                        <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1">
+                            <div class="modal-header">
+                                <a href="#" class="close">
+                                    &times;
+                                </a>
+
+                                <h3>
+                                    Título Modal
+                                </h3>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>
+                                    Um belo corpo...
+                                </p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <a href="#" class="btn primary">
+                                    Primário
+                                </a>
+
+                                <a href="#" class="btn secondary">
+                                    Secundário
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+              - Tooltips.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Tooltips
+                    </h2>
+
+                    <p>
+                        Twipsies são muito úteis para ajudar usuários
+                        confusos e direcioná-los na direção certa.
+                    </p>
+
+                    <p>
+                        <a class="btn js-btn" href="./javascript.html#twipsy">
+                            Obter o javascript &raquo;
+                        </a>
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <div class="twipsies well">
+                        <div style="position: relative">
+                            <p class="muted" style="margin-bottom: 0">
+                                Fique tranquila, me ame, hoje, ontem,
+                                <a href="#" title="below">desejos</a>
+                                sofridos por você, você, minha vida,
+                                meu tudo, adeus. Oh, continue a me
+                                amar, jamais duvide do coração fiel
+                                de seu amado. Não penses que exagero:
+                                por Deus te juro que assim é, e que me
+                                podes <a href="#" title="right">crer</a>:
+                                eu a ninguém amei, a ninguém hei-de amar
+                                senão a ti. Esta noite te amo em uma
+                                tarde de primavera. Te amo com a janela
+                                aberta. És minha, e as coisas são minhas,
+                                e meu amor altera as <a href="#" title="left">coisas</a>
+                                ao meu redor e as coisas a meu redor
+                                alteram meu amor. <a href="#" title="above">Então</a>
+                                tu pensas que há muitos casais como nós
+                                por esse mundo ?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+              - Popovers.
+             -->
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Popovers
+                    </h2>
+
+                    <p>
+                        Use popovers para fornecer informações subtextuais
+                        a uma página sem afetar o layout.
+                    </p>
+
+                    <p>
+                        <a class="btn js-btn" href="./javascript.html#popover">
+                            Obter o javascript &raquo;
+                        </a>
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <div class="well popover-well">
+                        <div class="popover-wrapper">
+                            <div class="popover left">
+                                <div class="arrow"></div>
+
+                                <div class="inner">
+                                    <h3 class="title">
+                                        Título Popover
+                                    </h3>
+
+                                    <div class="content">
+                                        <p>
+                                            Fique tranquila, me ame, hoje, ontem,
+                                            desejos sofridos por você, você, minha
+                                            vida, meu tudo, adeus. Oh, continue a
+                                            me amar, jamais duvide do coração fiel
+                                            de seu amado.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <img class="large-bird" src="assets/img/bird.png" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Usando Javascript w/ Bootstrap.
+         -->
+        <section id="javascript">
+            <div class="page-header">
+                <h1>
+                    Usando Javascript com Bootstrap
+
+                    <small>
+                        Um índice de plug-ins para você começar
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span4">
+                    <h2>
+                        Começando
+                    </h2>
+
+                    <p>
+                        Integrar javascript com a biblioteca Bootstrap é
+                        super fácil. Abaixo, abordamos o básico e fornecemos
+                        alguns plug-ins incríveis para você começar !
+                    </p>
+
+                    <p>
+                        <a class="btn primary" href="./javascript.html">
+                            Ver manual Javascript &raquo;
+                        </a>
+                    </p>
+                </div>
+
+                <div class="span12">
+                    <h3>
+                        O que está incluído
+                    </h3>
+
+                    <p>
+                        Dê vida a alguns dos componentes principais do
+                        Bootstrap com novos plug-ins personalizados que
+                        funcionam com
+                        <a href="https://jquery.com/" rel="noopener" target="_blank">jQuery</a> e
+                        <a href="https://github.com/ender-js/Ender" rel="noopener" target="_blank">Ender</a>.
+                        Incentivamos você a ampliá-los e modificá-los para
+                        atender às suas necessidades específicas de
+                        desenvolvimento.
+                    </p>
+
+                    <table class="zebra-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 150px;">
+                                    Arquivo
+                                </th>
+
+                                <th>
+                                    Descrição
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="./javascript.html#modal">
+                                        bootstrap-modal.js
+                                    </a>
+                                </td>
+
+                                <td>
+                                    Nosso plugin Modal é uma versão <strong>super</strong>
+                                    simplificada do plugin js modal tradicional!
+                                    Tomamos cuidado especial para incluir apenas
+                                    as funcionalidades básicas que exigimos no
+                                    bootstrap.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="./javascript.html#alerts">
+                                        bootstrap-alerts.js
+                                    </a>
+                                </td>
+
+                                <td>
+                                    O plugin de alerta é uma classe superpequena
+                                    para adicionar funcionalidades próximas aos
+                                    alertas.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="./javascript.html#dropdowns">
+                                        bootstrap-dropdown.js
+                                    </a>
+                                </td>
+
+                                <td>
+                                    Este plugin é para adicionar interação
+                                    suspensa à barra superior do bootstrap ou
+                                    navegações com guias.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="./javascript.html#scrollspy">
+                                        bootstrap-scrollspy.js
+                                    </a>
+                                </td>
+
+                                <td>
+                                    O plugin ScrollSpy serve para adicionar
+                                    uma navegação de atualização automática
+                                    com base na posição de rolagem à barra
+                                    superior do bootstrap.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="./javascript.html#tabs">
+                                        bootstrap-tabs.js
+                                    </a>
+                                </td>
+
+                                <td>
+                                    Este plug-in adiciona funcionalidade rápida
+                                    e dinâmica de guias e comprimidos para
+                                    percorrer o conteúdo local.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="./javascript.html#twipsy">
+                                        bootstrap-twipsy.js
+                                    </a>
+                                </td>
+
+                                <td>
+                                    Baseado no excelente plugin jQuery.tipsy;
+                                    twipsy é uma versão atualizada, que não
+                                    depende de imagens, usa css3 para animações
+                                    e atributos de dados para armazenamento
+                                    local de títulos !
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="./javascript.html#popover">
+                                        bootstrap-popover.js
+                                    </a>
+                                </td>
+
+                                <td>
+                                    O plugin popover fornece uma interface
+                                    simples para adicionar popovers ao seu
+                                    aplicativo. Ele estende o plugin
+                                    <a href="#twipsy">boostrap-twipsy.js</a>,
+                                    então certifique-se de pegar esse arquivo
+                                    também ao incluir popovers em seu projeto !
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>
+                        O javascript é necessário?
+                    </h3>
+
+                    <p>
+                        <strong>
+                            Não !
+                        </strong>
+
+                        Bootstrap foi projetado principalmente para ser
+                        uma biblioteca CSS. Este javascript fornece uma
+                        camada interativa básica além dos estilos incluídos.
+                    </p>
+
+                    <p>
+                        No entanto, para aqueles que precisam de javascript,
+                        fornecemos os plug-ins acima para ajudá-lo a entender
+                        como integrar Bootstrap com javascript e fornecer
+                        imediatamente uma opção rápida e leve para a
+                        funcionalidade básica.
+                    </p>
+
+                    <p>
+                        Para obter mais informações e ver algumas demonstrações
+                        ao vivo, consulte nosso <a href="./javascript.html">
+                        página do manual do plugin</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="pull-right">
+                <a href="#">
+                    De volta ao topo
+                </a>
+            </p>
+
+            <p>
+                Projetado e construído com todo o amor do mundo
+                <a href="" rel="noopener" target="_blank">@kwrite</a> por
+                <a href="" rel="noopener" target="_blank">@bwrite</a> e
+                <a href="" rel="noopener" target="_blank">@local</a>.
+                <br>
+
+                Licenciado sob o
+                <a href="#" rel="noopener" target="_blank">
+                    GNU - GENERAL PUBLIC LICENSE v3
+                </a>.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

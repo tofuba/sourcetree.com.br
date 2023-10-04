@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <!--
+      - Copyright (C) <ano>  Chifrudo <chifrudo@localhost.com.br>
+      -
+      - Este programa é um software livre: você pode redistribuí-lo e/ou
+      - modificá-lo sob os termos da GNU General Public License conforme
+      - publicada por a Free Software Foundation, seja a versão 3 da
+      - Licença, ou (a seu critério) qualquer versão posterior.
+      -
+      - Este programa é distribuído na esperança de que seja útil,
+      - mas SEM QUALQUER GARANTIA; mesmo sem a garantia implícita de
+      - COMERCIABILIDADE ou ADEQUAÇÃO PARA UM FIM ESPECÍFICO. Veja a
+      - Licença Pública Geral GNU para mais detalhes.
+      -
+      - Você deve ter recebido uma cópia da GNU General Public License
+      - juntamente com este programa. Caso contrário, consulte
+      - <https://www.gnu.org/licenses/>.
+     -->
+
+    <!--
+      - Charset.
+     -->
+    <meta charset="utf-8">
+
+    <!--
+      - Viewport.
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+      - Favicon.
+     -->
+    <link rel="icon" href="assets/ico/favicon.ico" type="image/x-icon">
+
+    <!--
+      - Título.
+     -->
+    <title>Bootstrap</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--
+      - HTML5 shim, para suporte IE6-8 de elementos HTML.
+     -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv-3.7.3.js"></script>
+    <![endif]-->
+
+    <!--
+      - Javascript.
+     -->
+    <script src="assets/js/jquery/jquery-1.5.2.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <!--
+      - Javascript.
+     -->
+    <script>
+        $(function()
+        {
+            prettyPrint();
+        });
+    </script>
+
+    <!--
+      - Javascript.
+     -->
+    <script src="assets/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-alerts.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-twipsy.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-popover.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-scrollspy.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-tabs.js" type="text/javascript"></script>
+
+    <!--
+      - Styles.
+     -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/docs.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/google-code-prettify/prettify.css">
+
+</head>
+<body id="bootstrap-js">
+
+    <!--
+      - Topbar.
+     -->
+    <div class="topbar" data-scrollspy="scrollspy" >
+        <div class="fill">
+            <div class="container">
+                <h3>
+                    <a href="#">
+                        Bootstrap JS
+                    </a>
+                </h3>
+
+                <ul>
+                    <li>
+                        <a href="#overview">
+                            Visão Geral
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#modal">
+                            Modals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#dropdown">
+                            Dropdown
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#scrollspy">
+                            ScrollSpy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#tabs">
+                            Tabs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#twipsy">
+                            Twipsy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#popover">
+                            Popover
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#alerts">
+                            Alertas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--
+      - Masthead (coisa de projeto).
+     -->
+    <header class="jumbotron subhead" id="overview">
+        <div class="inner">
+            <div class="container">
+                <h1>
+                    Javascript para Bootstrap
+                </h1>
+
+                <p class="lead">
+                    Dê vida aos componentes do Bootstrap com plug-ins novos
+                    e personalizados que funcionam com
+                    <a href="https://jquery.com/" rel="noopener" target="_blank">jQuery</a> e
+                    <a href="https://github.com/ender-js/Ender" rel="noopener" target="_blank">Ender</a>.
+                </p>
+
+                <p>
+                    <a href="./index.html">
+                        &larr; Voltar para a página inicial do Bootstrap
+                    </a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!--
+          - Modal.
+         -->
+        <section id="modal">
+            <div class="page-header">
+                <h1>
+                    Modals
+                    <small>
+                        bootstrap-modal.js
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span4 columns">
+                    <p>
+                        Nosso plugin Modal é uma versão super simplificada
+                        do plugin js modal tradicional, tomando cuidado
+                        especial para incluir apenas a funcionalidade básica
+                        que exigimos aqui no Bootstrap.
+                    </p>
+
+                    <a href="assets/js/bootstrap-modal.js" rel="noopener" target="_blank" class="btn primary">
+                        Baixar
+                    </a>
+                </div>
+
+                <div class="span12 columns">
+                    <h3>
+                        Usando bootstrap-modal
+                    </h3>
+
+                    <pre class="prettyprint linenums">$('#my-modal').modal(options);</pre>
+
+                    <h3>
+                        Opções
+                    </h3>
+
+                    <table class="zebra-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 100px;">
+                                    Nome
+                                </th>
+
+                                <th style="width: 50px;">
+                                    Tipo
+                                </th>
+
+                                <th style="width: 50px;">
+                                    Padrão
+                                </th>
+
+                                <th>
+                                    Descrição
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    backdrop
+                                </td>
+
+                                <td>
+                                    boolean
+                                </td>
+
+                                <td>
+                                    false
+                                </td>
+
+                                <td>
+                                    Inclui um elemento de cenário modal
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    keyboard
+                                </td>
+
+                                <td>
+                                    boolean
+                                </td>
+
+                                <td>
+                                    false
+                                </td>
+
+                                <td>
+                                    Fecha o modal quando a tecla escape é
+                                    pressionada
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    show
+                                </td>
+
+                                <td>
+                                    boolean
+                                </td>
+
+                                <td>
+                                    false
+                                </td>
+
+                                <td>
+                                    Abre modal na inicialização da classe
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>
+                        Marcação
+                    </h3>
+
+                    <p>
+                        Você pode ativar modais em sua página facilmente,
+                        sem precisar escrever uma única linha de javascript.
+                        Basta dar a um elemento um atributo <code>data-controls-modal</code>
+                        que corresponde a um id de elemento modal e, quando
+                        clicado, ele iniciará seu modal. Para adicionar opções
+                        modais, basta incluí-las também como atributos de
+                        dados.
+                    </p>
+
+                    <pre class="prettyprint linenums">
+&lt;a class="btn" data-controls-modal="my-modal" data-backdrop="true"&gt;
+    Modal de lançamento
+&lt;/a&gt;
+</pre>
+                    <p>
+                        <span class="label notice">
+                            Notícia
+                        </span>&nbsp;
+
+                        Se você deseja que seu modal entre e saia animado,
+                        basta adicionar uma classe <code>.fade</code> ao
+                        seu elemento <code>.modal</code> (consulte a
+                        demonstração para ver isso em ação).
+                    </p>
+
+                    <h3>
+                        Métodos
+                    </h3>
+
+                    <h4>
+                        .modal(options)
+                    </h4>
+
+                    <p>
+                        Ativa seu conteúdo como modal. Aceita opções opcionais
+                        <code>object</code>.
+                    </p>
+
+                    <pre class="prettyprint linenums">
+$('#my-modal').modal({
+    closeOnEscape: true
+})</pre>
+
+                    <h4>
+                        .modal('toggle')
+                    </h4>
+
+                    <p>
+                        Alterna manualmente um modal.
+                    </p>
+
+                    <pre class="prettyprint linenums">$('#my-modal').modal('toggle');</pre>
+
+                    <h4>
+                        .modal('show')
+                    </h4>
+
+                    <p>
+                        Abre manualmente um modal.
+                    </p>
+
+                    <pre class="prettyprint linenums">$('#my-modal').modal('show');</pre>
+
+                    <h4>
+                        .modal('hide')
+                    </h4>
+
+                    <p>
+                        Oculta manualmente um modal.
+                    </p>
+
+                    <pre class="prettyprint linenums">$('#my-modal').modal('hide');</pre>
+
+                    <h4>
+                        .modal(true)
+                    </h4>
+
+                    <p>
+                        Retorna uma instância de classe modal de elementos.
+                    </p>
+
+                    <pre class="prettyprint linenums">$('#my-modal').modal(true);</pre>
+
+                    <p>
+                        <span class="label notice">
+                            Notícia
+                        </span>&nbsp;
+
+                        Alternativamente, isso pode ser recuperado com
+                        <code>$().data('modal');</code>.
+                    </p>
+
+                    <h3>
+                        Eventos
+                    </h3>
+
+                    <p>
+                        A classe modal do Bootstrap expõe alguns eventos
+                        para conectar-se à funcionalidade modal.
+                    </p>
+
+                    <table class="zebra-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 150px;">
+                                    Eventos
+                                </th>
+
+                                <th>
+                                    Descrição
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    show
+                                </td>
+
+                                <td>
+                                    Este evento é acionado imediatamente quando
+                                    o método de instância <code>show</code> é
+                                    chamado.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    shown
+                                </td>
+
+                                <td>
+                                    Este evento é acionado quando o modal fica
+                                    visível para o usuário (aguardará a
+                                    conclusão das transições CSS).
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    hide
+                                </td>
+
+                                <td>
+                                    Este evento é disparado imediatamente quando
+                                    o método de instância <code>hide</code> é
+                                    chamado.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    hidden
+                                </td>
+
+                                <td>
+                                    Este evento é acionado quando o modal termina
+                                    de ser ocultado do usuário (aguardará a
+                                    conclusão das transições CSS).
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <pre class="prettyprint linenums">
+$('#my-modal').bind('hidden', function ()
+{
+    /**
+     * Faça alguma coisa ...
+     */
+})</pre>
+
+                    <h3>
+                        Demonstração
+                    </h3>
+
+                    <!--
+                      - Amostra de conteúdo modal.
+                     -->
+                    <div id="modal-from-dom" class="modal hide fade">
+                        <div class="modal-header">
+                            <a href="#" class="close">
+                                &times;
+                            </a>
+
+                            <h3>
+                                Título Modal
+                            </h3>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>
+                                Um belo corpo...
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <a href="#" class="btn primary">
+                                Primário
+                            </a>
+
+                            <a href="#" class="btn secondary">
+                                Secundário
+                            </a>
+                        </div>
+                    </div>
+
+                    <button
+                        data-controls-modal="modal-from-dom"
+                        data-backdrop="true"
+                        data-keyboard="true"
+                        class="btn danger">
+                        Exibir Modal
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Dropdown.
+         -->
+        <section id="dropdown">
+            <div class="page-header">
+                <h1>
+                    Dropdown
+                    <small>
+                        bootstrap-dropdown.js
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span4 columns">
+                    <p>
+                        Este plugin é para adicionar interação suspensa
+                        à barra superior do bootstrap ou navegações com
+                        guias.
+                    </p>
+
+                    <a href="assets/js/bootstrap-dropdown.js" rel="noopener" target="_blank" class="btn primary">
+                        Baixar
+                    </a>
+                </div>
+
+                <div class="span12 columns">
+                    <h3>
+                        Usando boostrap-dropdown.js
+                    </h3>
+
+                    <pre class="prettyprint linenums">$('#topbar').dropdown();</pre>
+
+                    <h3>
+                        Marcação
+                    </h3>
+
+                    <p>
+                        Para adicionar rapidamente a funcionalidade suspensa
+                        a qualquer elemento de navegação, use o atributo
+                        <code>data-dropdown</code>. Qualquer menu suspenso de
+                        bootstrap válido será ativado automaticamente.
+                    </p>
+
+                    <pre class="prettyprint linenums">
+&lt;ul class="tabs"&gt;
+    &lt;li class="active"&gt;
+        &lt;a href="#"&gt;
+            Casa
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li class="dropdown" data-dropdown="dropdown" &gt;
+        &lt;a href="#" class="dropdown-toggle"&gt;
+            Dropdown
+        &lt;/a&gt;
+
+        &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;
+                &lt;a href="#"&gt;
+                    Link secundário
+                &lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;a href="#"&gt;
+                    Outra coisa aqui
+                &lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;li class="divider"&gt;&lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#"&gt;
+                    Outro link
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+                    <p>
+                        <span class="label notice">
+                            Notícia
+                        </span>&nbsp;
+
+                        Se sua interface do usuário tiver vários menus
+                        suspensos, considere adicionar o atributo
+                        <code>data-dropdown</code> para um elemento de
+                        contêiner mais significativo, como <code>.tabs</code>
+                        ou <code>.topbar</code>.
+                    </p>
+
+                    <h3>
+                        Métodos
+                    </h3>
+
+                    <h4>
+                        $().dropdown();
+                    </h4>
+
+                    <p>
+                        Uma API programática para ativar menus para uma
+                        determinada barra superior ou navegação com guias.
+                    </p>
+
+                    <h3>
+                        Demonstração
+                    </h3>
+
+                    <div class="topbar-wrapper">
+                        <div id="topbar-example" class="topbar" data-dropdown="dropdown">
+                            <div class="topbar-inner">
+                                <div class="container">
+                                    <h3>
+                                        <a href="#">
+                                            Nome do Projeto
+                                        </a>
+                                    </h3>
+
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                Link
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                Link
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <form action="">
+                                        <input type="text" placeholder="Buscar" style="width: 178px;">
+                                    </form>
+
+                                    <ul class="nav secondary-nav">
+                                        <li class="menu">
+                                            <a href="#" class="menu">
+                                                Dropdown 1
+                                            </a>
+
+                                            <ul class="menu-dropdown">
+                                                <li>
+                                                    <a href="#">
+                                                        Link secundário
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#">
+                                                        Outra coisa aqui
+                                                    </a>
+                                                </li>
+
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#">
+                                                        Outro link
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="menu">
+                                            <a href="#" class="menu">
+                                                Dropdown 2
+                                            </a>
+
+                                            <ul class="menu-dropdown">
+                                                <li>
+                                                    <a href="#">
+                                                        Link secundário
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#">
+                                                        Outra coisa aqui
+                                                    </a>
+                                                </li>
+
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#">
+                                                        Outro link
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - ScrollSpy.
+         -->
+        <section id="scrollspy">
+            <div class="page-header">
+                <h1>
+                    ScrollSpy
+                    <small>
+                        bootstrap-scrollspy.js
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span4 columns">
+                    <p>
+                        Este plugin é para adicionar a interação scrollspy (
+                        navegação com atualização automática) à barra superior
+                        do bootstrap.
+                    </p>
+
+                    <a href="assets/js/bootstrap-scrollspy.js" rel="noopener" target="_blank" class="btn primary">
+                        Baixar
+                    </a>
+                </div>
+
+                <div class="span12 columns">
+                    <h2>
+                        Usando boostrap-scrollspy.js
+                    </h2>
+
+                    <pre class="prettyprint linenums">$('#topbar').dropdown();</pre>
+
+                    <h3>
+                        Marcação
+                    </h3>
+
+                    <p>
+                        Para adicionar facilmente o comportamento scrollspy
+                        à sua navegação, basta adicionar o atributo
+                        <code>data-scrollspy</code> para o
+                        <code>.topbar</code>.
+                    </p>
+
+                    <pre class="prettyprint linenums">&lt;div class="topbar" data-scrollspy="scrollspy" &gt;...&lt;/div&gt;</pre>
+
+                    <h3>
+                        Métodos
+                    </h3>
+
+                    <h4>
+                        $().scrollspy()
+                    </h4>
+
+                    <p>
+                        Ativa automaticamente os botões de navegação
+                        pela posição de rolagem do usuário.
+                    </p>
+
+                    <pre class="prettyprint linenums">$('body > .topbar').scrollSpy();</pre>
+
+                    <p>
+                        <span class="label notice">
+                            Notícia
+                        </span>&nbsp;
+
+                        As tags âncora da barra superior devem ter alvos
+                        de identificação resolvíveis. Por exemplo, um
+                        <code>&lt;a href="#home"&gt;home&lt;/a&gt;</code>
+                        deve corresponder a algo no dom como
+                        <code>&lt;div id="home"&gt;&lt;/div&gt;</code>.
+                    </p>
+
+                    <h4>
+                        .scrollspy('refresh')
+                    </h4>
+
+                    <p>
+                        O scrollspy armazena em cache botões de navegação e
+                        coordenadas de seção para desempenho. Se você precisar
+                        atualizar esse cache (provavelmente se tiver conteúdo
+                        dinâmico), basta chamar esse método de atualização. Se
+                        você usou o atributo data para definir seu scrollspy,
+                        basta chamar refresh no corpo.
+                    </p>
+
+                    <pre class="prettyprint linenums">$('body').scrollspy('refresh');</pre>
+
+                    <h3>
+                        Demonstração
+                    </h3>
+
+                    <p>
+                        Confira a navegação da barra superior nesta página.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Tabs.
+         -->
+        <section id="tabs">
+            <div class="page-header">
+                <h1>
+                    Tabs
+                    <small>
+                        bootstrap-tabs.js
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span4 columns">
+                    <p>
+                        Este plugin adiciona funcionalidade rápida e
+                        dinâmica de guias e comprimidos.
+                    </p>
+
+                    <a href="assets/js/bootstrap-tabs.js" rel="noopener" target="_blank" class="btn primary">
+                        Baixar
+                    </a>
+                </div>
+
+                <div class="span12 columns">
+                    <h3>
+                        Usando boostrap-tabs.js
+                    </h3>
+
+                    <pre class="prettyprint linenums">$('.tabs').tabs()</pre>
+
+                    <h3>
+                        Marcação
+                    </h3>
+
+                    <p>
+                        Você pode ativar uma navegação por tab ou pill sem
+                        escrever nenhum javascript, simplesmente fornecendo
+                        a eles um atributo <code>data-tabs</code> ou
+                        <code>data-pills</code>.
+                    </p>
+
+                    <pre class="prettyprint linenums"> &lt;ul class="tabs" data-tabs="tabs" &gt;...&lt;/ul&gt;</pre>
+
+                    <h3>
+                        Métodos
+                    </h3>
+
+                    <h4>
+                        $().tabs or $().pills;
+                    </h4>
+
+                    <p>
+                        Ativa a funcionalidade de guias e comprimidos para
+                        um determinado contêiner. Os links das guias devem
+                        fazer referência aos IDs no documento.
+                    </p>
+
+                    <pre class="prettyprint linenums">
+&lt;ul class="tabs"&gt;
+    &lt;li class="active"&gt;
+        &lt;a href="#home"&gt;
+            Casa
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#profile"&gt;
+            Perfil
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#messages"&gt;
+            Mensagens
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="#settings"&gt;
+            Configurações
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="pill-content"&gt;
+    &lt;div class="active" id="home"&gt;
+        ...
+    &lt;/div&gt;
+
+    &lt;div id="profile"&gt;
+        ...
+    &lt;/div&gt;
+
+    &lt;div id="messages"&gt;
+        ...
+    &lt;/div&gt;
+
+    &lt;div id="settings"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+    $(function ()
+    {
+        $('.tabs').tabs();
+    });
+&lt;/script&gt;</pre>
+
+                    <h3>
+                        Demonstração
+                    </h3>
+
+                    <ul class="tabs" data-tabs="tabs" >
+                        <li class="active">
+                            <a href="#home">
+                                Casa
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#profile">
+                                Perfil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#messages">
+                                Mensagens
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#settings">
+                                Configurações
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div id="my-tab-content" class="tab-content">
+                        <div class="active" id="home">
+                            <p>
+                                Você me faz acreditar que nada existe sem amor,
+                                que você veio para mostrar o meu caminho. Você
+                                traz uma paixão que eu nunca pude descobrir.
+                                Mostrou que um coração não vive sem carinho. Se
+                                amar é viver, vivo porque amo você. O amor não
+                                precisa ser explicado, apenas vivido. E eu amo
+                                vivê-lo com você! Eu ainda escolheria você,
+                                mesmo com todas as opções do planeta. Que este
+                                seja nosso destino: amar, viver e começar cada
+                                dia juntos!
+                            </p>
+                        </div>
+
+                        <div id="profile">
+                            <p>
+                                Se amar é viver, vivo porque amo você. O amor
+                                não precisa ser explicado, apenas vivido. E eu
+                                amo vivê-lo com você! Eu ainda escolheria você,
+                                mesmo com todas as opções do planeta. Que este
+                                seja nosso destino: amar, viver e começar cada
+                                dia juntos! Eu enfrentaria o mundo todo com uma
+                                só mão, se você me prometesse que estaria
+                                segurando a outra. Quando o querer é sincero, o
+                                amor se torna completo. Meu amor por você é tão
+                                grande que às vezes até parece que nem cabe mais
+                                neste mundo. Amor é uma palavra que significa
+                                muito, mas nem metade do que eu sinto por você.
+                                Amar não é sofrer, amar é sonhar, viver e lutar
+                                junto com você. Orar por quem você ama é uma das
+                                mais lindas provas de amor. O verdadeiro amor
+                                nunca acaba e no coração de quem o sente ele é
+                                eterno como o tempo!
+                            </p>
+                        </div>
+
+                        <div id="messages">
+                            <p>
+                                O amor não precisa ser explicado, apenas vivido.
+                                E eu amo vivê-lo com você! Eu ainda escolheria
+                                você, mesmo com todas as opções do planeta. Que
+                                este seja nosso destino: amar, viver e começar
+                                cada dia juntos! Eu enfrentaria o mundo todo
+                                com uma só mão, se você me prometesse que
+                                estaria segurando a outra. Quando o querer é
+                                sincero, o amor se torna completo. Meu amor por
+                                você é tão grande que às vezes até parece que
+                                nem cabe mais neste mundo. Amor é uma palavra
+                                que significa muito, mas nem metade do que eu
+                                sinto por você. Amar não é sofrer, amar é
+                                sonhar, viver e lutar junto com você.
+                            </p>
+                        </div>
+
+                        <div id="settings">
+                            <p>
+                                Eu ainda escolheria você, mesmo com todas as
+                                opções do planeta. Que este seja nosso destino:
+                                amar, viver e começar cada dia juntos! Eu
+                                enfrentaria o mundo todo com uma só mão, se
+                                você me prometesse que estaria segurando a
+                                outra. Quando o querer é sincero, o amor se
+                                torna completo. Meu amor por você é tão grande
+                                que às vezes até parece que nem cabe mais neste
+                                mundo. Amor é uma palavra que significa muito,
+                                mas nem metade do que eu sinto por você. Amar
+                                não é sofrer, amar é sonhar, viver e lutar
+                                junto com você. Orar por quem você ama é uma
+                                das mais lindas provas de amor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Tips.
+         -->
+        <section id="twipsy">
+            <div class="page-header">
+                <h1>
+                    Twipsy
+                    <small>
+                        bootstrap-twipsy.js
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span4 columns">
+                    <p>
+                        Baseado no excelente plugin jQuery.tipsy; twipsy é
+                        uma versão atualizada, que não depende de imagens,
+                        usa css3 para animações e atributos de dados para
+                        armazenamento de títulos!
+                    </p>
+
+                    <a href="assets/js/bootstrap-twipsy.js" rel="noopener" target="_blank" class="btn primary">
+                        Baixar
+                    </a>
+                </div>
+
+                <div class="span12 columns">
+                    <h3>
+                        Usando bootstrap-twipsy.js
+                    </h3>
+
+                    <pre class="prettyprint linenums">$('#example').twipsy(options);</pre>
+
+                    <h3>
+                        Opções
+                    </h3>
+
+                    <table class="zebra-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 100px;">
+                                    Nome
+                                </th>
+
+                                <th style="width: 100px;">
+                                    Tipo
+                                </th>
+
+                                <th style="width: 50px;">
+                                    Padrão
+                                </th>
+
+                                <th>
+                                    Descrição
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    animate
+                                </td>
+
+                                <td>
+                                    boolean
+                                </td>
+
+                                <td>
+                                    true
+                                </td>
+
+                                <td>
+                                    Aplique uma transição css fade na dica
+                                    de ferramenta.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    delayIn
+                                </td>
+
+                                <td>
+                                    number
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    Atraso antes de mostrar a dica de ferramenta (ms).
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    delayOut
+                                </td>
+
+                                <td>
+                                    number
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    Atraso antes de ocultar a dica de ferramenta (ms).
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    fallback
+                                </td>
+
+                                <td>
+                                    string
+                                </td>
+
+                                <td>
+                                    ''
+                                </td>
+
+                                <td>
+                                    Texto a ser usado quando nenhum título de
+                                    dica de ferramenta estiver presente.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    placement
+                                </td>
+
+                                <td>
+                                    string
+                                </td>
+
+                                <td>
+                                    'above'
+                                </td>
+
+                                <td>
+                                    Como posicionar a dica de ferramenta -<br>
+                                    acima | abaixo | esquerda | direita.<br>
+                                    above | below  | left     | right.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    html
+                                </td>
+
+                                <td>
+                                    boolean
+                                </td>
+
+                                <td>
+                                    false
+                                </td>
+
+                                <td>
+                                    Permite conteúdo HTML na dica de ferramenta.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    live
+                                </td>
+
+                                <td>
+                                    boolean
+                                </td>
+
+                                <td>
+                                    false
+                                </td>
+
+                                <td>
+                                    Use delegação de eventos em vez de
+                                    manipuladores de eventos individuais.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    offset
+                                </td>
+
+                                <td>
+                                    number
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    Deslocamento de pixel da dica de ferramenta
+                                    do elemento de destino.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    title
+                                </td>
+
+                                <td>
+                                    string | function
+                                </td>
+
+                                <td>
+                                    'title'
+                                </td>
+
+                                <td>
+                                    Atributo ou método para recuperar o texto
+                                    do título.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    trigger
+                                </td>
+
+                                <td>
+                                    string
+                                </td>
+
+                                <td>
+                                    'hover'
+                                </td>
+
+                                <td>
+                                    Como a dica de ferramenta é acionada - 
+                                    hover | focus | manual.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>
+                        Métodos
+                    </h3>
+
+                    <h4>
+                        $().twipsy(options)
+                    </h4>
+
+                    <p>
+                        Anexa um manipulador twipsy a uma coleção de
+                        elementos.
+                    </p>
+
+                    <h4>
+                        .twipsy('show')
+                    </h4>
+
+                    <p>
+                        Revela um elemento twipsy.
+                    </p>
+
+                    <pre class="prettyprint linenums">$('#element').twipsy('show');</pre>
+
+                    <h4>
+                        .twipsy('hide')
+                    </h4>
+
+                    <p>
+                        Esconde um elemento twipsy.
+                    </p>
+
+                    <pre class="prettyprint linenums">$('#element').twipsy('hide')</pre>
+
+                    <h4>
+                        .twipsy(true)
+                    </h4>
+
+                    <p>
+                        Retorna uma instância de classe twipsy de elementos.
+                    </p>
+
+                    <pre class="prettyprint linenums">$('#element').twipsy(true)</pre>
+
+                    <p>
+                        <span class="label notice">
+                            Notícia
+                        </span>&nbsp;
+
+                        Alternativamente, isso pode ser recuperado com <code>$().data('twipsy')</code>.
+                    </p>
+
+                    <h3>
+                        Demonstração
+                    </h3>
+
+                    <div class="well">
+                        <p class="muted">
+                            Que este seja nosso destino: amar,
+                            <a href="#" rel="twipsy" title="Algum texto do título">viver e começar</a>
+                            cada dia juntos ! Eu enfrentaria o mundo todo com
+                            uma só mão, se você me prometesse que estaria
+                            segurando a outra. Quando o querer é sincero,
+                            o amor se torna completo. Meu amor
+
+                            <a href="#" rel="twipsy" title="Outro título">por você</a>
+                            é tão grande que às vezes até parece que nem cabe
+                            mais neste mundo. Amor é uma palavra que significa
+                            muito, mas nem metade do que eu sinto por você.
+                            Amar não é sofrer,
+
+                            <a href="#" rel="twipsy" title="Outro aqui também">amar é sonhar,</a>
+                            viver e lutar junto com você. Orar por quem você ama é uma das
+
+                            <a href="#" rel='twipsy' title="A última dica!">mais lindas</a>
+                            provas de amor. O verdadeiro amor nunca acaba e no
+                            coração de quem o sente ele é eterno como o tempo!
+                        </p>
+                    </div>
+
+                    <script>
+                        $(function ()
+                        {
+                            $("a[rel=twipsy]").twipsy({
+                                live: true
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Popovers
+         -->
+        <section id="popover">
+            <div class="page-header">
+                <h1>
+                    Popovers
+                    <small>
+                        bootstrap-popover.js
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span4 columns">
+                    <p>
+                        O plugin popover fornece uma interface simples para
+                        adicionar popovers ao seu aplicativo. Ele estende o
+                        plugin <a href="#twipsy">boostrap-twipsy.js</a>,
+                        então certifique-se de pegar esse arquivo também ao
+                        incluir popovers em seu projeto!
+                    </p>
+
+                    <a href="assets/js/bootstrap-popover.js" rel="noopener" target="_blank" class="btn primary">
+                        Baixar
+                    </a>
+                </div>
+
+                <div class="span12 columns">
+                    <h3>
+                        Usando boostrap-popover.js
+                    </h3>
+
+                    <pre class="prettyprint linenums">$('#example').popover(options)</pre>
+
+                    <h3>
+                        Opções
+                    </h3>
+
+                    <table class="zebra-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 100px;">
+                                    Nome
+                                </th>
+
+                                <th style="width: 100px;">
+                                    Tipo
+                                </th>
+
+                                <th style="width: 50px;">
+                                    Padrão
+                                </th>
+
+                                <th>
+                                    Descrição
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    animate
+                                </td>
+
+                                <td>
+                                    boolean
+                                </td>
+
+                                <td>
+                                    true
+                                </td>
+
+                                <td>
+                                    Aplique uma transição css fade na dica de
+                                    ferramenta.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    delayIn
+                                </td>
+
+                                <td>
+                                    number
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    Atraso antes de mostrar a dica de ferramenta (ms).
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    delayOut
+                                </td>
+
+                                <td>
+                                    number
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    Atraso antes de ocultar a dica de ferramenta (ms).
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    fallback
+                                </td>
+
+                                <td>
+                                    string
+                                </td>
+
+                                <td>
+                                    ''
+                                </td>
+
+                                <td>
+                                    Texto a ser usado quando nenhum título de
+                                    dica de ferramenta estiver presente.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    placement
+                                </td>
+
+                                <td>
+                                    string
+                                </td>
+
+                                <td>
+                                    'right'
+                                </td>
+
+                                <td>
+                                    Como posicionar a dica de ferramenta - <br>
+                                    acima | abaixo | esquerda | direita.<br>
+                                    above | below  | left     | right.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    html
+                                </td>
+
+                                <td>
+                                    boolean
+                                </td>
+
+                                <td>
+                                    false
+                                </td>
+
+                                <td>
+                                    Permite conteúdo HTML na dica de ferramenta.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    live
+                                </td>
+
+                                <td>
+                                    boolean
+                                </td>
+
+                                <td>
+                                    false
+                                </td>
+
+                                <td>
+                                    Use delegação de eventos em vez de manipuladores
+                                    de eventos individuais.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    offset
+                                </td>
+
+                                <td>
+                                    number
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    Deslocamento de pixel da dica de ferramenta
+                                    do elemento de destino.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    title
+                                </td>
+
+                                <td>
+                                    string | function
+                                </td>
+
+                                <td>
+                                    'title'
+                                </td>
+
+                                <td>
+                                    Atributo ou método para recuperar o texto
+                                    do título.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    content
+                                </td>
+
+                                <td>
+                                    string | function
+                                </td>
+
+                                <td>
+                                    'data-content'
+                                </td>
+
+                                <td>
+                                    Atributo ou método para recuperar texto
+                                    de conteúdo.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    trigger
+                                </td>
+
+                                <td>
+                                    string
+                                </td>
+
+                                <td>
+                                    'hover'
+                                </td>
+
+                                <td>
+                                    Como a dica de ferramenta é acionada -
+                                    hover | focus | manual.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>
+                        Métodos
+                    </h3>
+
+                    <h4>
+                        $().popover(options)
+                    </h4>
+
+                    <p>
+                        Inicializa popovers para uma coleção de elementos.
+                    </p>
+
+                    <h4>
+                        .popover('show')
+                    </h4>
+
+                    <p>
+                        Revela um popover de elementos.
+                    </p>
+
+                    <pre class="prettyprint linenums">$('#element').popover('show');</pre>
+
+                    <h4>
+                        .popover('hide')
+                    </h4>
+
+                    <p>
+                        Oculta um popover de elementos.
+                    </p>
+
+                    <pre class="prettyprint linenums">$('#element').popover('hide');</pre>
+
+                    <h3>
+                        Demonstração
+                    </h3>
+
+                    <a href="#" class="btn danger" rel="popover" title="Um título" data-content="E aqui está um conteúdo incrível. É muito envolvente. certo ?">
+                        Passe o mouse para popover.
+                    </a>
+
+                    <script>
+                        $(function ()
+                        {
+                            $("a[rel=popover]")
+                                .popover({
+                                    offset: 10
+                                })
+                                .click(function(e)
+                                {
+                                    e.preventDefault()
+                                });
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <!--
+          - Alertas.
+         -->
+        <section id="alerts">
+            <div class="page-header">
+                <h1>
+                    Alertas
+                    <small>
+                        bootstrap-alerts.js
+                    </small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="span4 columns">
+                    <p>
+                        O plugin de alerta é uma classe superpequena para
+                        adicionar funcionalidades próximas aos alertas.
+                    </p>
+
+                    <a href="assets/js/bootstrap-alerts.js" rel="noopener" target="_blank" class="btn primary">
+                        Baixar
+                    </a>
+                </div>
+
+                <div class="span12 columns">
+                    <h3>
+                        Usando bootstrap-alerts.js
+                    </h3>
+
+                    <pre class="prettyprint linenums">$(".alert-message").alert()</pre>
+
+                    <h3>
+                        Marcação
+                    </h3>
+
+                    <p>
+                        Basta adicionar um atributo <code>data-alert</code>
+                        às suas mensagens de alerta para fornecer-lhes
+                        automaticamente funcionalidade próxima.
+                    </p>
+
+                    <h3>
+                        Métodos
+                    </h3>
+
+                    <h4>
+                        $().alert()
+                    </h4>
+
+                    <p>
+                        Envolve todos os alertas com funcionalidade aproximada.
+                        Para que seus alertas sejam animados quando fechados,
+                        certifique-se de que eles tenham o <code>.fade</code>
+                        e a classe <code>.in</code> já aplicado a eles.
+                    </p>
+
+                    <h4>
+                        .alert('close')
+                    </h4>
+
+                    <p>
+                        Fecha um alerta.
+                    </p>
+
+                    <pre class="prettyprint linenums">$(".alert-message").alert('close')</pre>
+
+                    <h3>
+                        Demonstração
+                    </h3>
+
+                    <div class="alert-message warning fade in" data-alert="alert" >
+                        <a class="close" href="#">
+                            &times;
+                        </a>
+
+                        <p>
+                            <strong>
+                                Santo guacamole!
+                            </strong>
+
+                            É melhor verificar você mesmo, você não está
+                            com uma aparência muito boa.
+                        </p>
+                    </div>
+
+                    <div class="alert-message block-message error fade in" data-alert="alert" >
+                        <a class="close" href="#">
+                            &times;
+                        </a>
+
+                        <p>
+                            <strong>
+                                Ah, droga! Você recebeu um erro!
+                            </strong>
+
+                            Mude isso e aquilo e tente novamente. Quando estamos
+                            juntos, o mundo parece mais bonito e o amor mais
+                            forte. Te amo muito ! Você é o meu porto seguro, a
+                            minha fonte de carinho e amor. Te amo para sempre !
+                        </p>
+
+                        <div class="alert-actions">
+                            <a class="btn small" href="#">
+                                Tome esta ação
+                            </a>
+
+                            <a class="btn small" href="#">
+                                Ou faça isso
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="pull-right">
+                <a href="#">
+                    De volta ao topo
+                </a>
+            </p>
+
+            <p>
+                Projetado e construído com todo o amor do mundo
+                <a href="" rel="noopener" target="_blank">@kwrite</a> por
+                <a href="" rel="noopener" target="_blank">@bwrite</a> e
+                <a href="" rel="noopener" target="_blank">@local</a>.
+                <br>
+
+                Licenciado sob o
+                <a href="#" rel="noopener" target="_blank">
+                    GNU - GENERAL PUBLIC LICENSE v3
+                </a>.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

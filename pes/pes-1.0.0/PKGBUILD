@@ -1,0 +1,26 @@
+#
+# Contribuidor: Chifrudo <chifrudo@localhost.com.br>
+#
+
+pkgname=pes
+pkgver=1.0.0
+pkgrel=0
+pkgdesc="Ferramenta para conversão de arquivos do programa pés."
+arch=('x86_64')
+url="http://localhost/pes"
+license=('GPL')
+depends=('libpng' 'cairo')
+source=("pes.tar.gz")
+sha256sums=('SKIP')
+
+build()
+{
+    cd pes
+    make
+}
+
+package()
+{
+    cd pes
+    install -D -m 0755 pes "$pkgdir/usr/local/bin/pes"
+}
